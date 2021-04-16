@@ -142,7 +142,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Julian and my friends call me Aco. I enjoy creating systems that live on the internet. My
+              Hello! My name is Julian and I enjoy creating systems that live on the internet. My
               interest in development started back in 2003 when I decided to create my own mod of a
               video game titled Argentum Online. In this, which was a game for me taught me a lot
               about Visual &amp; Servers!
