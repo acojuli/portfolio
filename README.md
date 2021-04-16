@@ -2,10 +2,7 @@
   acojuli.com.ar
 </h1>
 <p align="center">
-  The portfolio of <a href="https://acojuli.com.ar" target="_blank">juliaco.com.ar</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
-</p>
-<p align="center">
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/a726b1f0-0289-464e-a4d1-0e662f63e3d2/deploy-status)](https://app.netlify.com/sites/acojuli/deploys)
+  The portfolio of <a href="https://acojuli.com.ar" target="_blank">acojuli.com.ar</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
 ## 🛠 Installation & Set Up
