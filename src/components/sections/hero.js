@@ -57,9 +57,9 @@ const Hero = () => {
   const three = <h3 className="big-heading">Software Engineer.</h3>;
   const four = (
     <p>
-      I'm a software developer living in Argentina who specializes in building (and occasionally designing)
-      digital experiences. Currently, I'm a development team lead at{' '}
-      <a href="https://ppn.gov.ar/">PPN</a> Prision Ombudsman's National.
+      I'm a software developer living in Argentina who specializes in building (and occasionally designing) digital experiences. 
+      Currently, I'm working as a Sr Full Stack Developer at the{' '}
+      <a href="https://ppn.gov.ar/">Prison Ombudsman's National Office.</a>
     </p>
   );
   const five = (

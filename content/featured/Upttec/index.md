@@ -1,16 +1,17 @@
 ---
-date: '2'
-title: 'Upttec'
-cover: './upttec.png'
-github: ''
-external: 'https://www.upttec.com/'
+date: '3'
+title: 'Crypto Professional Manager'
+cover: './cpm.png'
+github: 'https://github.com/acojuli/cpmanager'
+external: 'https://cpmanager.netlify.app/'
 tech:
-  - HTML5
-  - CSS3
-  - JavaScript
-  - AMP
-  - Bootstrap
+  - React js
+  - Next js
+  - Sass
+  - Netlify
+  - Webpack
 showInProjects: true
 ---
 
-Website with Google AMP technology for a perfect organic positioning. Within this project I also developed a landing for an [ERP system](https://www.upttec.com/ventas) and a landing for [creative web design](https://www.upttec.com/web).
+A blog website developed with React js and Next js as framwork for a perfect organic positioning.
+Animation effects on components.

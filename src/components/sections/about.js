@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'Bootstrap', 'React js', 'TypeScript', 'Node js', 'Firebase'];
+  const skills = ['JavaScript (ES6+)', 'Visual Studio Code', 'React js', 'Firebase', 'Next js', 'Git'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,18 +142,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Julian and I enjoy creating systems that live on the internet. My
-              interest in development started back in 2003 when I decided to create my own mod of a
-              video game titled Argentum Online. In this, which was a game for me taught me a lot
-              about Visual &amp; Servers!
+            Hello! My name is Julian and I enjoy creating systems that live in the internet. My interest 
+            in development started back in 2003 when I decided to create my own mod of a videogame titled Argentum Online. 
+            This experience taught me a lot about Visual Basic &amp; Servers!
             </p>
 
             <p>
-              Fast-forward to today, and I've had the privilege of working at{' '}
+              I've had the privilege of working at{' '}
               <a href="https://upttec.com/">a development agency</a>,{' '}
-              <a href="http://kenbrown-audio-tv.com.ar/">a huge corporation</a>, and{' '}
+              <a href="http://kenbrown-audio-tv.com.ar/">a big corporation</a>, and{' '}
               <a href="https://divlo.com.ar/">a startup app development company</a>. My
-              main focus these days is building accessible, inclusive systems and digital
+              main goal these days is to build accessible, inclusive systems and digital 
               experiences at <a href="https://www.ppn.gov.ar/">PPN</a> that improve the
               work flow of the institution.
             </p>
