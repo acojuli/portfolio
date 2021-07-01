@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
-import downloadFile from '../../public/resume.pdf'
 
 const StyledMenu = styled.div`
   display: none;
