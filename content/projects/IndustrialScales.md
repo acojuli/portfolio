@@ -1,7 +1,6 @@
 ---
 date: '2019-05-01'
 title: 'Industrial scales'
-github: 'https://github.com/acojuli/balanzasysistemas'
 external: 'https://balanzasindustriales.netlify.app/'
 tech:
   - HTML5

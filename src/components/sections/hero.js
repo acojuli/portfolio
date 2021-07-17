@@ -57,9 +57,10 @@ const Hero = () => {
   const three = <h3 className="big-heading">Front End Developer.</h3>;
   const four = (
     <p>
-      I'm a software developer living in Argentina who specializes in building (and occasionally designing) digital experiences. 
+      I'm a software developer who specializes in building (and occasionally designing) digital experiences. 
       Currently, I'm working as a Team Leader at the{' '}
-      <a href="https://ppn.gov.ar/">Prison Ombudsman's National Office.</a>
+      <a href="https://ppn.gov.ar/">Prison Ombudsman's Office.</a> 
+      <br/>I also work as a React JS Tutor at{' '}<a href="https://www.coderhouse.com/">Coder House.</a>
     </p>
   );
   const five = (
