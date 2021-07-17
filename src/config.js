@@ -7,20 +7,8 @@ module.exports = {
       url: 'https://github.com/acojuli',
     },
     {
-      name: 'Instagram',
-      url: 'https://instagram.com/acojuli',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/aco_juli',
-    },
-    {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/guidojuliangomez/',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/acojuli',
     },
   ],
 

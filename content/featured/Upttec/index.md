@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2'
 title: 'Crypto Professional Manager'
 cover: './cpm.png'
 github: 'https://github.com/acojuli/cpmanager'

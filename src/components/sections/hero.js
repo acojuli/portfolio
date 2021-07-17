@@ -54,11 +54,11 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Guido Julian Gomez.</h2>;
-  const three = <h3 className="big-heading">Software Engineer.</h3>;
+  const three = <h3 className="big-heading">Front End Developer.</h3>;
   const four = (
     <p>
       I'm a software developer living in Argentina who specializes in building (and occasionally designing) digital experiences. 
-      Currently, I'm working as a Sr Full Stack Developer at the{' '}
+      Currently, I'm working as a Team Leader at the{' '}
       <a href="https://ppn.gov.ar/">Prison Ombudsman's National Office.</a>
     </p>
   );

@@ -2,9 +2,9 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Guido Julian Gomez - Software Engineer',
+    title: 'Guido Julian Gomez - Front End Developer',
     description:
-      'Guido Julian Gomez is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+      'Guido Julian Gomez is a Front End Developer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://acojuli.com.ar', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@acojuli',

@@ -1,17 +1,17 @@
 ---
-date: '1'
+date: '3'
 title: 'Plantits'
 cover: './plantits.jpg'
 github: 'https://github.com/acojuli/plantits'
 external: 'https://plantits.netlify.app/'
 tech:
-  - VS Code
   - React.js
-  - Firebase
-  - Webpack
+  - JSX
   - Bootstrap
+  - Firestore
+  - VSC  
 showInProjects: true
 ---
 
-A super fast plant store developed with React js, which uses Firebase to host items and save purchase orders.<br>
-Use JSX syntax to create elements by joining rendering logic with user interface logic.
+An ecommerce developed with React JS, which use the Firebase suit to host items and save purchase orders.<br>
+Use JSX syntax to create elements by joining rendering logic with user interface logic. {APIs, Hooks & Context}.

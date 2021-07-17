@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'Visual Studio Code', 'React js', 'Firebase', 'Next js', 'Git'];
+  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React js', 'Firebase', 'Next js', 'Git'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -152,9 +152,9 @@ const About = () => {
               <a href="https://upttec.com/">a development agency</a>,{' '}
               <a href="http://kenbrown-audio-tv.com.ar/">a big corporation</a>, and{' '}
               <a href="https://divlo.com.ar/">a startup app development company</a>. My
-              main goal these days is to build accessible, inclusive systems and digital 
-              experiences at <a href="https://www.ppn.gov.ar/">PPN</a> that improve the
-              work flow of the institution.
+              main goal these days is to keep building
+              accessible, inclusive systems and outstanding
+              digital experiences in a multidisciplinary team.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
