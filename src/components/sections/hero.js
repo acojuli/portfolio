@@ -58,7 +58,7 @@ const Hero = () => {
   const four = (
     <p>
       I'm a software developer who specializes in building (and occasionally designing) digital experiences. 
-      Currently, I'm working as a Team Leader at the{' '}
+      Currently, I'm working as a Tech Leader at the{' '}
       <a href="https://ppn.gov.ar/">Prison Ombudsman's Office.</a> 
       <br/>I also work as a React JS Tutor at{' '}<a href="https://www.coderhouse.com/">Coder House.</a>
     </p>
