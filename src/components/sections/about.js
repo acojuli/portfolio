@@ -142,19 +142,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            Hello! My name is Julian and I enjoy creating systems that live in the internet. My interest 
-            in development started back in 2003 when I decided to create my own mod of a videogame titled Argentum Online. 
-            This experience taught me a lot about Visual Basic &amp; Servers!
+            My interest in development started back in 2003
+            when I decided to create my own mod of a
+            videogame titled Argentum Online. This experience
+            taught me a little about Visual Basic &amp; Servers!
+            
             </p>
 
             <p>
-              I've had the privilege of working at{' '}
-              <a href="https://upttec.com/">a development agency</a>,{' '}
-              <a href="http://kenbrown-audio-tv.com.ar/">a big corporation</a>, and{' '}
-              <a href="https://divlo.com.ar/">a startup app development company</a>. My
-              main goal these days is to keep building
-              accessible, inclusive systems and outstanding
-              digital experiences in a multidisciplinary team.
+            My main goal these days is to keep building
+            accessible, inclusive systems and outstanding
+            digital experiences.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
