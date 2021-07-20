@@ -1,6 +1,6 @@
 ---
 date: '2015-06-01'
-title: 'Team Lead'
+title: 'Tech Lead'
 company: 'PPN'
 location: 'CABA, Arg'
 range: 'Mar 2019 - Present'
