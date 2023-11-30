@@ -1,5 +1,5 @@
 ---
-date: '2017-01-10'
+date: '9'
 title: 'Radio PPN'
 github: ''
 external: 'https://radio.ppn.gov.ar/'
@@ -7,7 +7,7 @@ tech:
   - Joomla
   - PHP
   - MySQL
-company: ''
+company: 'PPN'
 showInProjects: true
 ---
 

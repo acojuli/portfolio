@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\@reach\\router\\index.js", "fs", "C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\lodash\\merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\@reach\\router\\index.js", "fs", "C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\lodash\\merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\@reach\\router\\index.js"], root["fs"], root["C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\lodash\\merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\@reach\\router\\index.js"], root["fs"], root["C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\lodash\\merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -160,7 +160,8 @@ var plugins = [{
     "exclude": [],
     "pageTransitionDelay": 0
   }
-}]; // During bootstrap, we write requires at top of this file which looks like:
+}];
+// During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
 //     plugin: require("/path/to/plugin1/gatsby-ssr.js"),
@@ -172,35 +173,32 @@ var plugins = [{
 //   },
 // ]
 
-const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js"); // Run the specified API in any plugins that have implemented it
+const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js");
 
-
+// Run the specified API in any plugins that have implemented it
 module.exports = (api, args, defaultReturn, argTransform) => {
   if (!apis[api]) {
     console.log(`This API doesn't exist`, api);
-  } // Run each plugin in series.
+  }
+
+  // Run each plugin in series.
   // eslint-disable-next-line no-undef
-
-
   let results = plugins.map(plugin => {
     if (!plugin.plugin[api]) {
       return undefined;
     }
-
     const result = plugin.plugin[api](args, plugin.options);
-
     if (result && argTransform) {
       args = argTransform({
         args,
         result
       });
     }
-
     return result;
-  }); // Filter out undefined results.
+  });
 
+  // Filter out undefined results.
   results = results.filter(result => typeof result !== `undefined`);
-
   if (results.length > 0) {
     return results;
   } else {
@@ -261,6 +259,7 @@ module.exports = (api, args, defaultReturn, argTransform) => {
  * }
  */
 exports.replaceRenderer = true;
+
 /**
  * Called after every page Gatsby server renders while building HTML so you can
  * set head and body components to be rendered in your `html.js`.
@@ -323,8 +322,8 @@ exports.replaceRenderer = true;
  *   setBodyAttributes(BodyAttributes)
  * }
  */
-
 exports.onRenderBody = true;
+
 /**
  * Called after every page Gatsby server renders while building HTML so you can
  * replace head components to be rendered in your `html.js`. This is useful if
@@ -362,8 +361,8 @@ exports.onRenderBody = true;
  *   replaceHeadComponents(headComponents)
  * }
  */
-
 exports.onPreRenderHTML = true;
+
 /**
  * Allow a plugin to wrap the page element.
  *
@@ -389,8 +388,8 @@ exports.onPreRenderHTML = true;
  *   return <Layout {...props}>{element}</Layout>
  * }
  */
-
 exports.wrapPageElement = true;
+
 /**
  * Allow a plugin to wrap the root element.
  *
@@ -420,7 +419,6 @@ exports.wrapPageElement = true;
  *   )
  * }
  */
-
 exports.wrapRootElement = true;
 
 /***/ }),
@@ -489,19 +487,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import testRequireError from "./test-require-error"
+
+// import testRequireError from "./test-require-error"
 // For some extremely mysterious reason, webpack adds the above module *after*
 // this module so that when this code runs, testRequireError is undefined.
 // So in the meantime, we'll just inline it.
-
 const testRequireError = (moduleName, err) => {
   const regex = new RegExp(`Error: Cannot find module\\s.${moduleName}`);
   const firstLine = err.toString().split(`\n`)[0];
   return regex.test(firstLine);
 };
-
 let Html;
-
 try {
   Html = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '../src/html'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 } catch (err) {
@@ -512,7 +508,6 @@ try {
     process.exit();
   }
 }
-
 Html = Html && Html.__esModule ? Html.default : Html;
 /* harmony default export */ __webpack_exports__["default"] = ((pagePath, callback) => {
   let headComponents = [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -526,49 +521,36 @@ Html = Html && Html.__esModule ? Html.default : Html;
   let postBodyComponents = [];
   let bodyProps = {};
   let htmlStr;
-
   const setHeadComponents = components => {
     headComponents = headComponents.concat(components);
   };
-
   const setHtmlAttributes = attributes => {
     htmlAttributes = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()(htmlAttributes, attributes);
   };
-
   const setBodyAttributes = attributes => {
     bodyAttributes = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()(bodyAttributes, attributes);
   };
-
   const setPreBodyComponents = components => {
     preBodyComponents = preBodyComponents.concat(components);
   };
-
   const setPostBodyComponents = components => {
     postBodyComponents = postBodyComponents.concat(components);
   };
-
   const setBodyProps = props => {
     bodyProps = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()({}, bodyProps, props);
   };
-
   const getHeadComponents = () => headComponents;
-
   const replaceHeadComponents = components => {
     headComponents = components;
   };
-
   const getPreBodyComponents = () => preBodyComponents;
-
   const replacePreBodyComponents = components => {
     preBodyComponents = components;
   };
-
   const getPostBodyComponents = () => postBodyComponents;
-
   const replacePostBodyComponents = components => {
     postBodyComponents = components;
   };
-
   _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default()(`onRenderBody`, {
     setHeadComponents,
     setHtmlAttributes,
@@ -587,7 +569,8 @@ Html = Html && Html.__esModule ? Html.default : Html;
     replacePostBodyComponents,
     pathname: pagePath
   });
-  const htmlElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Html, { ...bodyProps,
+  const htmlElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Html, {
+    ...bodyProps,
     body: ``,
     headComponents: headComponents.concat([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
       key: `io`,
@@ -651,36 +634,35 @@ __webpack_require__.r(__webpack_exports__);
 
 const pathCache = new Map();
 let matchPaths = [];
-
 const trimPathname = rawPathname => {
-  const pathname = decodeURIComponent(rawPathname); // Remove the pathPrefix from the pathname.
-
-  const trimmedPathname = Object(_strip_prefix__WEBPACK_IMPORTED_MODULE_1__["default"])(pathname, "") // Remove any hashfragment
-  .split(`#`)[0] // Remove search query
+  const pathname = decodeURIComponent(rawPathname);
+  // Remove the pathPrefix from the pathname.
+  const trimmedPathname = Object(_strip_prefix__WEBPACK_IMPORTED_MODULE_1__["default"])(pathname, "")
+  // Remove any hashfragment
+  .split(`#`)[0]
+  // Remove search query
   .split(`?`)[0];
   return trimmedPathname;
 };
-
 function absolutify(path) {
   // If it's already absolute, return as-is
   if (path.startsWith(`/`) || path.startsWith(`https://`) || path.startsWith(`http://`)) {
     return path;
-  } // Calculate path relative to current location, adding a trailing slash to
+  }
+  // Calculate path relative to current location, adding a trailing slash to
   // match behavior of @reach/router
-
-
   return new URL(path, window.location.href + (window.location.href.endsWith(`/`) ? `` : `/`)).pathname;
 }
+
 /**
  * Set list of matchPaths
  *
  * @param {Array<{path: string, matchPath: string}>} value collection of matchPaths
  */
-
-
 const setMatchPaths = value => {
   matchPaths = value;
 };
+
 /**
  * Return a matchpath url
  * if `match-paths.json` contains `{ "/foo*": "/page1", ...}`, then
@@ -689,7 +671,6 @@ const setMatchPaths = value => {
  * @param {string} rawPathname A raw pathname
  * @return {string|null}
  */
-
 const findMatchPath = rawPathname => {
   const trimmedPathname = cleanPath(rawPathname);
   const pickPaths = matchPaths.map(({
@@ -702,13 +683,12 @@ const findMatchPath = rawPathname => {
     };
   });
   const path = Object(_reach_router_lib_utils__WEBPACK_IMPORTED_MODULE_0__["pick"])(pickPaths, trimmedPathname);
-
   if (path) {
     return Object(_normalize_page_path__WEBPACK_IMPORTED_MODULE_2__["default"])(path.route.originalPath);
   }
-
   return null;
 };
+
 /**
  * Return a matchpath params from reach/router rules
  * if `match-paths.json` contains `{ ":bar/*foo" }`, and the path is /baz/zaz/zoo
@@ -718,7 +698,6 @@ const findMatchPath = rawPathname => {
  * @param {string} rawPathname A raw pathname
  * @return {object}
  */
-
 const grabMatchParams = rawPathname => {
   const trimmedPathname = cleanPath(rawPathname);
   const pickPaths = matchPaths.map(({
@@ -731,13 +710,13 @@ const grabMatchParams = rawPathname => {
     };
   });
   const path = Object(_reach_router_lib_utils__WEBPACK_IMPORTED_MODULE_0__["pick"])(pickPaths, trimmedPathname);
-
   if (path) {
     return path.params;
   }
-
   return {};
-}; // Given a raw URL path, returns the cleaned version of it (trim off
+};
+
+// Given a raw URL path, returns the cleaned version of it (trim off
 // `#` and query params), or if it matches an entry in
 // `match-paths.json`, its matched path is returned
 //
@@ -745,23 +724,19 @@ const grabMatchParams = rawPathname => {
 //
 // Or if `match-paths.json` contains `{ "/foo*": "/page1", ...}`, then
 // `/foo?bar=far` => `/page1`
-
 const findPath = rawPathname => {
   const trimmedPathname = trimPathname(absolutify(rawPathname));
-
   if (pathCache.has(trimmedPathname)) {
     return pathCache.get(trimmedPathname);
   }
-
   let foundPath = findMatchPath(trimmedPathname);
-
   if (!foundPath) {
     foundPath = cleanPath(rawPathname);
   }
-
   pathCache.set(trimmedPathname, foundPath);
   return foundPath;
 };
+
 /**
  * Clean a url and converts /index.html => /
  * E.g. `/foo?bar=far` => `/foo`
@@ -769,15 +744,12 @@ const findPath = rawPathname => {
  * @param {string} rawPathname A raw pathname
  * @return {string}
  */
-
 const cleanPath = rawPathname => {
   const trimmedPathname = trimPathname(absolutify(rawPathname));
   let foundPath = trimmedPathname;
-
   if (foundPath === `/index.html`) {
     foundPath = `/`;
   }
-
   foundPath = Object(_normalize_page_path__WEBPACK_IMPORTED_MODULE_2__["default"])(foundPath);
   return foundPath;
 };
@@ -835,7 +807,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const prefetchPathname = _loader__WEBPACK_IMPORTED_MODULE_5__["default"].enqueue;
 const StaticQueryContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({});
-
 function StaticQueryDataRenderer({
   staticQueryData,
   data,
@@ -845,7 +816,6 @@ function StaticQueryDataRenderer({
   const finalData = data ? data.data : staticQueryData[query] && staticQueryData[query].data;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, finalData && render(finalData), !finalData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading (StaticQuery)"));
 }
-
 const StaticQuery = props => {
   const {
     data,
@@ -860,18 +830,16 @@ const StaticQuery = props => {
     staticQueryData: staticQueryData
   }));
 };
-
 const useStaticQuery = query => {
   var _context$query;
-
   if (typeof react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext !== `function` && "development" === `development`) {
     throw new Error(`You're likely using a version of React that doesn't support Hooks\n` + `Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.`);
   }
+  const context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(StaticQueryContext);
 
-  const context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(StaticQueryContext); // query is a stringified number like `3303882` when wrapped with graphql, If a user forgets
+  // query is a stringified number like `3303882` when wrapped with graphql, If a user forgets
   // to wrap the query in a grqphql, then casting it to a Number results in `NaN` allowing us to
   // catch the misuse of the API and give proper direction
-
   if (isNaN(Number(query))) {
     throw new Error(`useStaticQuery was called with a string but expects to be called using \`graphql\`. Try this:
 
@@ -880,25 +848,21 @@ import { useStaticQuery, graphql } from 'gatsby';
 useStaticQuery(graphql\`${query}\`);
 `);
   }
-
   if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
     return context[query].data;
   } else {
     throw new Error(`The result of this StaticQuery could not be fetched.\n\n` + `This is likely a bug in Gatsby and if refreshing the page does not fix it, ` + `please open an issue in https://github.com/gatsbyjs/gatsby/issues`);
   }
 };
-
 StaticQuery.propTypes = {
   data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   render: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
-
 function graphql() {
   throw new Error(`It appears like Gatsby is misconfigured. Gatsby related \`graphql\` calls ` + `are supposed to only be evaluated at compile time, and then compiled away. ` + `Unfortunately, something went wrong and the query was left in the compiled code.\n\n` + `Unless your site has a complex or custom babel/Gatsby configuration this is likely a bug in Gatsby.`);
 }
-
 
 
 /***/ }),
@@ -924,64 +888,53 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Available resource loading statuses
  */
-
 const PageResourceStatus = {
   /**
    * At least one of critical resources failed to load
    */
   Error: `error`,
-
   /**
    * Resources loaded successfully
    */
   Success: `success`
 };
-
 const preferDefault = m => m && m.default || m;
-
 const stripSurroundingSlashes = s => {
   s = s[0] === `/` ? s.slice(1) : s;
   s = s.endsWith(`/`) ? s.slice(0, -1) : s;
   return s;
 };
-
 const createPageDataUrl = path => {
   const fixedPath = path === `/` ? `index` : stripSurroundingSlashes(path);
   return `${""}/page-data/${fixedPath}/page-data.json`;
 };
-
 function doFetch(url, method = `GET`) {
   return new Promise((resolve, reject) => {
     const req = new XMLHttpRequest();
     req.open(method, url, true);
-
     req.onreadystatechange = () => {
       if (req.readyState == 4) {
         resolve(req);
       }
     };
-
     req.send(null);
   });
 }
-
 const doesConnectionSupportPrefetch = () => {
   if (`connection` in navigator && typeof navigator.connection !== `undefined`) {
     if ((navigator.connection.effectiveType || ``).includes(`2g`)) {
       return false;
     }
-
     if (navigator.connection.saveData) {
       return false;
     }
   }
-
   return true;
 };
-
 const toPageResources = (pageData, component = null) => {
   const page = {
     componentChunkName: pageData.componentChunkName,
@@ -996,7 +949,6 @@ const toPageResources = (pageData, component = null) => {
     page
   };
 };
-
 class BaseLoader {
   constructor(loadComponent, matchPaths) {
     this.inFlightNetworkRequests = new Map();
@@ -1024,16 +976,14 @@ class BaseLoader {
     this.loadComponent = loadComponent;
     Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["setMatchPaths"])(matchPaths);
   }
-
   memoizedGet(url) {
     let inFlightPromise = this.inFlightNetworkRequests.get(url);
-
     if (!inFlightPromise) {
       inFlightPromise = doFetch(url, `GET`);
       this.inFlightNetworkRequests.set(url, inFlightPromise);
-    } // Prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
+    }
 
-
+    // Prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
     return inFlightPromise.then(response => {
       this.inFlightNetworkRequests.delete(url);
       return response;
@@ -1042,12 +992,10 @@ class BaseLoader {
       throw err;
     });
   }
-
   setApiRunner(apiRunner) {
     this.apiRunner = apiRunner;
     this.prefetchDisabled = apiRunner(`disableCorePrefetching`).some(a => a);
   }
-
   fetchPageDataJson(loadObj) {
     const {
       pagePath,
@@ -1058,73 +1006,69 @@ class BaseLoader {
       const {
         status,
         responseText
-      } = req; // Handle 200
+      } = req;
 
+      // Handle 200
       if (status === 200) {
         try {
           const jsonPayload = JSON.parse(responseText);
-
           if (jsonPayload.path === undefined) {
             throw new Error(`not a valid pageData response`);
           }
-
           return Object.assign(loadObj, {
             status: PageResourceStatus.Success,
             payload: jsonPayload
           });
-        } catch (err) {// continue regardless of error
+        } catch (err) {
+          // continue regardless of error
         }
-      } // Handle 404
+      }
 
-
+      // Handle 404
       if (status === 404 || status === 200) {
         // If the request was for a 404 page and it doesn't exist, we're done
         if (pagePath === `/404.html`) {
           return Object.assign(loadObj, {
             status: PageResourceStatus.Error
           });
-        } // Need some code here to cache the 404 request. In case
+        }
+
+        // Need some code here to cache the 404 request. In case
         // multiple loadPageDataJsons result in 404s
-
-
         return this.fetchPageDataJson(Object.assign(loadObj, {
           pagePath: `/404.html`,
           notFound: true
         }));
-      } // handle 500 response (Unrecoverable)
+      }
 
-
+      // handle 500 response (Unrecoverable)
       if (status === 500) {
         return Object.assign(loadObj, {
           status: PageResourceStatus.Error
         });
-      } // Handle everything else, including status === 0, and 503s. Should retry
+      }
 
-
+      // Handle everything else, including status === 0, and 503s. Should retry
       if (retries < 3) {
         return this.fetchPageDataJson(Object.assign(loadObj, {
           retries: retries + 1
         }));
-      } // Retried 3 times already, result is an error.
+      }
 
-
+      // Retried 3 times already, result is an error.
       return Object.assign(loadObj, {
         status: PageResourceStatus.Error
       });
     });
   }
-
   loadPageDataJson(rawPath) {
     const pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(rawPath);
-
     if (this.pageDataDb.has(pagePath)) {
       const pageData = this.pageDataDb.get(pagePath);
-
       if (true) {
         return Promise.resolve(pageData);
       }
     }
-
     return this.fetchPageDataJson({
       pagePath
     }).then(pageData => {
@@ -1132,36 +1076,29 @@ class BaseLoader {
       return pageData;
     });
   }
-
   findMatchPath(rawPath) {
     return Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findMatchPath"])(rawPath);
-  } // TODO check all uses of this and whether they use undefined for page resources not exist
+  }
 
-
+  // TODO check all uses of this and whether they use undefined for page resources not exist
   loadPage(rawPath) {
     const pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(rawPath);
-
     if (this.pageDb.has(pagePath)) {
       const page = this.pageDb.get(pagePath);
-
       if (true) {
         return Promise.resolve(page.payload);
       }
     }
-
     if (this.inFlightDb.has(pagePath)) {
       return this.inFlightDb.get(pagePath);
     }
-
     const inFlightPromise = Promise.all([this.loadAppData(), this.loadPageDataJson(pagePath)]).then(allData => {
       const result = allData[1];
-
       if (result.status === PageResourceStatus.Error) {
         return {
           status: PageResourceStatus.Error
         };
       }
-
       let pageData = result.payload;
       const {
         componentChunkName,
@@ -1171,23 +1108,19 @@ class BaseLoader {
       const componentChunkPromise = this.loadComponent(componentChunkName).then(component => {
         finalResult.createdAt = new Date();
         let pageResources;
-
         if (!component) {
           finalResult.status = PageResourceStatus.Error;
         } else {
           finalResult.status = PageResourceStatus.Success;
-
           if (result.notFound === true) {
             finalResult.notFound = true;
           }
-
           pageData = Object.assign(pageData, {
             webpackCompilationHash: allData[0] ? allData[0].webpackCompilationHash : ``
           });
           pageResources = toPageResources(pageData, component);
-        } // undefined if final result is an error
-
-
+        }
+        // undefined if final result is an error
         return pageResources;
       });
       const staticQueryBatchPromise = Promise.all(staticQueryHashes.map(staticQueryHash => {
@@ -1199,7 +1132,6 @@ class BaseLoader {
             jsonPayload
           };
         }
-
         return this.memoizedGet(`${""}/page-data/sq/d/${staticQueryHash}.json`).then(req => {
           const jsonPayload = JSON.parse(req.responseText);
           return {
@@ -1220,9 +1152,9 @@ class BaseLoader {
       });
       return Promise.all([componentChunkPromise, staticQueryBatchPromise]).then(([pageResources, staticQueryResults]) => {
         let payload;
-
         if (pageResources) {
-          payload = { ...pageResources,
+          payload = {
+            ...pageResources,
             staticQueryResults
           };
           finalResult.payload = payload;
@@ -1231,7 +1163,6 @@ class BaseLoader {
             pageResources: payload
           });
         }
-
         this.pageDb.set(pagePath, finalResult);
         return payload;
       });
@@ -1244,56 +1175,50 @@ class BaseLoader {
     });
     this.inFlightDb.set(pagePath, inFlightPromise);
     return inFlightPromise;
-  } // returns undefined if loading page ran into errors
+  }
 
-
+  // returns undefined if loading page ran into errors
   loadPageSync(rawPath) {
     const pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(rawPath);
-
     if (this.pageDb.has(pagePath)) {
       const pageData = this.pageDb.get(pagePath).payload;
       return pageData;
     }
-
     return undefined;
   }
-
   shouldPrefetch(pagePath) {
     // Skip prefetching if we know user is on slow or constrained connection
     if (!doesConnectionSupportPrefetch()) {
       return false;
-    } // Check if the page exists.
+    }
 
-
+    // Check if the page exists.
     if (this.pageDb.has(pagePath)) {
       return false;
     }
-
     return true;
   }
-
   prefetch(pagePath) {
     if (!this.shouldPrefetch(pagePath)) {
       return false;
-    } // Tell plugins with custom prefetching logic that they should start
+    }
+
+    // Tell plugins with custom prefetching logic that they should start
     // prefetching this path.
-
-
     if (!this.prefetchTriggered.has(pagePath)) {
       this.apiRunner(`onPrefetchPathname`, {
         pathname: pagePath
       });
       this.prefetchTriggered.add(pagePath);
-    } // If a plugin has disabled core prefetching, stop now.
+    }
 
-
+    // If a plugin has disabled core prefetching, stop now.
     if (this.prefetchDisabled) {
       return false;
     }
-
-    const realPath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(pagePath); // Todo make doPrefetch logic cacheable
+    const realPath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(pagePath);
+    // Todo make doPrefetch logic cacheable
     // eslint-disable-next-line consistent-return
-
     this.doPrefetch(realPath).then(() => {
       if (!this.prefetchCompleted.has(pagePath)) {
         this.apiRunner(`onPostPrefetchPathname`, {
@@ -1304,25 +1229,22 @@ class BaseLoader {
     });
     return true;
   }
-
   doPrefetch(pagePath) {
     const pageDataUrl = createPageDataUrl(pagePath);
     return Object(_prefetch__WEBPACK_IMPORTED_MODULE_0__["default"])(pageDataUrl, {
       crossOrigin: `anonymous`,
       as: `fetch`
-    }).then(() => // This was just prefetched, so will return a response from
+    }).then(() =>
+    // This was just prefetched, so will return a response from
     // the cache instead of making another request to the server
     this.loadPageDataJson(pagePath));
   }
-
   hovering(rawPath) {
     this.loadPage(rawPath);
   }
-
   getResourceURLsForPathname(rawPath) {
     const pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(rawPath);
     const page = this.pageDataDb.get(pagePath);
-
     if (page) {
       const pageResources = toPageResources(page.payload);
       return [...createComponentUrls(pageResources.page.componentChunkName), createPageDataUrl(pagePath)];
@@ -1330,13 +1252,11 @@ class BaseLoader {
       return null;
     }
   }
-
   isPageNotFound(rawPath) {
     const pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_2__["findPath"])(rawPath);
     const page = this.pageDb.get(pagePath);
     return !page || page.notFound;
   }
-
   loadAppData(retries = 0) {
     return this.memoizedGet(`${""}/page-data/app-data.json`).then(req => {
       const {
@@ -1344,55 +1264,46 @@ class BaseLoader {
         responseText
       } = req;
       let appData;
-
       if (status !== 200 && retries < 3) {
         // Retry 3 times incase of non-200 responses
         return this.loadAppData(retries + 1);
-      } // Handle 200
+      }
 
-
+      // Handle 200
       if (status === 200) {
         try {
           const jsonPayload = JSON.parse(responseText);
-
           if (jsonPayload.webpackCompilationHash === undefined) {
             throw new Error(`not a valid app-data response`);
           }
-
           appData = jsonPayload;
-        } catch (err) {// continue regardless of error
+        } catch (err) {
+          // continue regardless of error
         }
       }
-
       return appData;
     });
   }
-
 }
-
 const createComponentUrls = componentChunkName => (window.___chunkMapping[componentChunkName] || []).map(chunk => "" + chunk);
-
 class ProdLoader extends BaseLoader {
   constructor(asyncRequires, matchPaths) {
-    const loadComponent = chunkName => asyncRequires.components[chunkName] ? asyncRequires.components[chunkName]().then(preferDefault) // loader will handle the case when component is null
+    const loadComponent = chunkName => asyncRequires.components[chunkName] ? asyncRequires.components[chunkName]().then(preferDefault)
+    // loader will handle the case when component is null
     .catch(() => null) : Promise.resolve();
-
     super(loadComponent, matchPaths);
   }
-
   doPrefetch(pagePath) {
     return super.doPrefetch(pagePath).then(result => {
       if (result.status !== PageResourceStatus.Success) {
         return Promise.resolve();
       }
-
       const pageData = result.payload;
       const chunkName = pageData.componentChunkName;
       const componentUrls = createComponentUrls(chunkName);
       return Promise.all(componentUrls.map(_prefetch__WEBPACK_IMPORTED_MODULE_0__["default"])).then(() => pageData);
     });
   }
-
   loadPageDataJson(rawPath) {
     return super.loadPageDataJson(rawPath).then(data => {
       if (data.notFound) {
@@ -1406,18 +1317,16 @@ class ProdLoader extends BaseLoader {
             return {
               status: PageResourceStatus.Error
             };
-          } // if HEAD request wasn't 200, return notFound result
+          }
+
+          // if HEAD request wasn't 200, return notFound result
           // and show 404 page
-
-
           return data;
         });
       }
-
       return data;
     });
   }
-
 }
 let instance;
 const setLoader = _loader => {
@@ -1469,15 +1378,12 @@ __webpack_require__.r(__webpack_exports__);
   if (path === undefined) {
     return path;
   }
-
   if (path === `/`) {
     return `/`;
   }
-
   if (path.charAt(path.length - 1) === `/`) {
     return path.slice(0, -1);
   }
-
   return path;
 });
 
@@ -1496,9 +1402,7 @@ const support = function (feature) {
   if (typeof document === `undefined`) {
     return false;
   }
-
   const fakeLink = document.createElement(`link`);
-
   try {
     if (fakeLink.relList && typeof fakeLink.relList.supports === `function`) {
       return fakeLink.relList.supports(feature);
@@ -1506,17 +1410,14 @@ const support = function (feature) {
   } catch (err) {
     return false;
   }
-
   return false;
 };
-
 const linkPrefetchStrategy = function (url, options) {
   return new Promise((resolve, reject) => {
     if (typeof document === `undefined`) {
       reject();
       return;
     }
-
     const link = document.createElement(`link`);
     link.setAttribute(`rel`, `prefetch`);
     link.setAttribute(`href`, url);
@@ -1529,12 +1430,10 @@ const linkPrefetchStrategy = function (url, options) {
     parentElement.appendChild(link);
   });
 };
-
 const xhrPrefetchStrategy = function (url) {
   return new Promise((resolve, reject) => {
     const req = new XMLHttpRequest();
     req.open(`GET`, url, true);
-
     req.onload = () => {
       if (req.status === 200) {
         resolve();
@@ -1542,28 +1441,23 @@ const xhrPrefetchStrategy = function (url) {
         reject();
       }
     };
-
     req.send(null);
   });
 };
-
 const supportedPrefetchStrategy = support(`prefetch`) ? linkPrefetchStrategy : xhrPrefetchStrategy;
 const preFetched = {};
-
 const prefetch = function (url, options) {
   return new Promise(resolve => {
     if (preFetched[url]) {
       resolve();
       return;
     }
-
     supportedPrefetchStrategy(url, options).then(() => {
       resolve();
       preFetched[url] = true;
     }).catch(() => {}); // 404s are logged to the console anyway
   });
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (prefetch);
 
 /***/ }),
@@ -1576,7 +1470,6 @@ const prefetch = function (url, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 const preferDefault = m => m && m.default || m;
-
 if (false) {} else if (false) {} else {
   module.exports = () => null;
 }
@@ -1597,19 +1490,17 @@ __webpack_require__.r(__webpack_exports__);
  * Remove a prefix from a string. Return the input string if the given prefix
  * isn't found.
  */
+
 function stripPrefix(str, prefix = ``) {
   if (!prefix) {
     return str;
   }
-
   if (str === prefix) {
     return `/`;
   }
-
   if (str.startsWith(`${prefix}/`)) {
     return str.slice(prefix.length);
   }
-
   return str;
 }
 
@@ -1626,12 +1517,9 @@ function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
-
   return self;
 }
-
-module.exports = _assertThisInitialized;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1643,26 +1531,20 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /***/ (function(module, exports) {
 
 function _extends() {
-  module.exports = _extends = Object.assign || function (target) {
+  module.exports = _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
-
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
       }
     }
-
     return target;
-  };
-
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   return _extends.apply(this, arguments);
 }
-
-module.exports = _extends;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _extends, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1674,15 +1556,12 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /***/ (function(module, exports, __webpack_require__) {
 
 var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
   setPrototypeOf(subClass, superClass);
 }
-
-module.exports = _inheritsLoose;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _inheritsLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1698,9 +1577,7 @@ function _interopRequireDefault(obj) {
     "default": obj
   };
 }
-
-module.exports = _interopRequireDefault;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1711,62 +1588,33 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+function _getRequireWildcardCache(e) {
+  if ("function" != typeof WeakMap) return null;
+  var r = new WeakMap(),
+    t = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(e) {
+    return e ? t : r;
+  })(e);
+}
+function _interopRequireWildcard(e, r) {
+  if (!r && e && e.__esModule) return e;
+  if (null === e || "object" != _typeof(e) && "function" != typeof e) return {
+    "default": e
   };
-
-  return cache;
+  var t = _getRequireWildcardCache(r);
+  if (t && t.has(e)) return t.get(e);
+  var n = {
+      __proto__: null
+    },
+    a = Object.defineProperty && Object.getOwnPropertyDescriptor;
+  for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) {
+    var i = a ? Object.getOwnPropertyDescriptor(e, u) : null;
+    i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u];
+  }
+  return n["default"] = e, t && t.set(e, n), n;
 }
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-module.exports = _interopRequireWildcard;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _interopRequireWildcard, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1782,18 +1630,14 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   var target = {};
   var sourceKeys = Object.keys(source);
   var key, i;
-
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
     if (excluded.indexOf(key) >= 0) continue;
     target[key] = source[key];
   }
-
   return target;
 }
-
-module.exports = _objectWithoutPropertiesLoose;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1805,17 +1649,13 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /***/ (function(module, exports) {
 
 function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+  module.exports = _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
     o.__proto__ = p;
     return o;
-  };
-
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
   return _setPrototypeOf(o, p);
 }
-
-module.exports = _setPrototypeOf;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -1826,28 +1666,16 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _typeof(obj) {
+function _typeof(o) {
   "@babel/helpers - typeof";
 
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-  }
-
-  return _typeof(obj);
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
 }
-
-module.exports = _typeof;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -2995,12 +2823,9 @@ function parsePath(path) {
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 exports.__esModule = true;
 exports.onRenderBody = void 0;
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
 var knownOptions = {
   createOnly: {
     clientId: "string",
@@ -3025,15 +2850,12 @@ var knownOptions = {
     transport: "string"
   }
 };
-
 var onRenderBody = function onRenderBody(_ref, pluginOptions) {
   var setHeadComponents = _ref.setHeadComponents,
-      setPostBodyComponents = _ref.setPostBodyComponents;
-
+    setPostBodyComponents = _ref.setPostBodyComponents;
   if (true) {
     return null;
   } // Lighthouse recommends pre-connecting to google analytics
-
 
   setHeadComponents([/*#__PURE__*/_react.default.createElement("link", {
     rel: "preconnect",
@@ -3045,24 +2867,19 @@ var onRenderBody = function onRenderBody(_ref, pluginOptions) {
     href: "https://www.google-analytics.com"
   })]);
   var excludeGAPaths = [];
-
   if (typeof pluginOptions.exclude !== "undefined") {
-    var Minimatch = __webpack_require__(/*! minimatch */ "./node_modules/minimatch/minimatch.js").Minimatch;
-
+    var Minimatch = __webpack_require__(/*! minimatch */ "./node_modules/gatsby-plugin-google-analytics/node_modules/minimatch/minimatch.js").Minimatch;
     pluginOptions.exclude.map(function (exclude) {
       var mm = new Minimatch(exclude);
       excludeGAPaths.push(mm.makeRe());
     });
   }
-
   var gaCreateOptions = {};
-
   for (var option in knownOptions.createOnly) {
     if (typeof pluginOptions[option] === knownOptions.createOnly[option]) {
       gaCreateOptions[option] = pluginOptions[option];
     }
   }
-
   var setComponents = pluginOptions.head ? setHeadComponents : setPostBodyComponents;
   return setComponents([/*#__PURE__*/_react.default.createElement("script", {
     key: "gatsby-plugin-google-analytics",
@@ -3071,14 +2888,860 @@ var onRenderBody = function onRenderBody(_ref, pluginOptions) {
         if (typeof pluginOptions[option] === knownOptions.general[option]) {
           gaSetCommands += "ga('set', '" + option + "', '" + pluginOptions[option] + "');\n";
         }
-
         return gaSetCommands;
       }, "") + "\n      }"
     }
   })]);
 };
-
 exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-analytics/node_modules/minimatch/minimatch.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-analytics/node_modules/minimatch/minimatch.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = minimatch;
+minimatch.Minimatch = Minimatch;
+var path = {
+  sep: '/'
+};
+try {
+  path = __webpack_require__(/*! path */ "path");
+} catch (er) {}
+var GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {};
+var expand = __webpack_require__(/*! brace-expansion */ "./node_modules/brace-expansion/index.js");
+var plTypes = {
+  '!': {
+    open: '(?:(?!(?:',
+    close: '))[^/]*?)'
+  },
+  '?': {
+    open: '(?:',
+    close: ')?'
+  },
+  '+': {
+    open: '(?:',
+    close: ')+'
+  },
+  '*': {
+    open: '(?:',
+    close: ')*'
+  },
+  '@': {
+    open: '(?:',
+    close: ')'
+  }
+};
+
+// any single thing other than /
+// don't need to escape / when using new RegExp()
+var qmark = '[^/]';
+
+// * => any number of characters
+var star = qmark + '*?';
+
+// ** when dots are allowed.  Anything goes, except .. and .
+// not (^ or / followed by one or two dots followed by $ or /),
+// followed by anything, any number of times.
+var twoStarDot = '(?:(?!(?:\\\/|^)(?:\\.{1,2})($|\\\/)).)*?';
+
+// not a ^ or / followed by a dot,
+// followed by anything, any number of times.
+var twoStarNoDot = '(?:(?!(?:\\\/|^)\\.).)*?';
+
+// characters that need to be escaped in RegExp.
+var reSpecials = charSet('().*{}+?[]^$\\!');
+
+// "abc" -> { a:true, b:true, c:true }
+function charSet(s) {
+  return s.split('').reduce(function (set, c) {
+    set[c] = true;
+    return set;
+  }, {});
+}
+
+// normalizes slashes.
+var slashSplit = /\/+/;
+minimatch.filter = filter;
+function filter(pattern, options) {
+  options = options || {};
+  return function (p, i, list) {
+    return minimatch(p, pattern, options);
+  };
+}
+function ext(a, b) {
+  a = a || {};
+  b = b || {};
+  var t = {};
+  Object.keys(b).forEach(function (k) {
+    t[k] = b[k];
+  });
+  Object.keys(a).forEach(function (k) {
+    t[k] = a[k];
+  });
+  return t;
+}
+minimatch.defaults = function (def) {
+  if (!def || !Object.keys(def).length) return minimatch;
+  var orig = minimatch;
+  var m = function minimatch(p, pattern, options) {
+    return orig.minimatch(p, pattern, ext(def, options));
+  };
+  m.Minimatch = function Minimatch(pattern, options) {
+    return new orig.Minimatch(pattern, ext(def, options));
+  };
+  return m;
+};
+Minimatch.defaults = function (def) {
+  if (!def || !Object.keys(def).length) return Minimatch;
+  return minimatch.defaults(def).Minimatch;
+};
+function minimatch(p, pattern, options) {
+  if (typeof pattern !== 'string') {
+    throw new TypeError('glob pattern string required');
+  }
+  if (!options) options = {};
+
+  // shortcut: comments match nothing.
+  if (!options.nocomment && pattern.charAt(0) === '#') {
+    return false;
+  }
+
+  // "" only matches ""
+  if (pattern.trim() === '') return p === '';
+  return new Minimatch(pattern, options).match(p);
+}
+function Minimatch(pattern, options) {
+  if (!(this instanceof Minimatch)) {
+    return new Minimatch(pattern, options);
+  }
+  if (typeof pattern !== 'string') {
+    throw new TypeError('glob pattern string required');
+  }
+  if (!options) options = {};
+  pattern = pattern.trim();
+
+  // windows support: need to use /, not \
+  if (path.sep !== '/') {
+    pattern = pattern.split(path.sep).join('/');
+  }
+  this.options = options;
+  this.set = [];
+  this.pattern = pattern;
+  this.regexp = null;
+  this.negate = false;
+  this.comment = false;
+  this.empty = false;
+
+  // make the set of regexps etc.
+  this.make();
+}
+Minimatch.prototype.debug = function () {};
+Minimatch.prototype.make = make;
+function make() {
+  // don't do it more than once.
+  if (this._made) return;
+  var pattern = this.pattern;
+  var options = this.options;
+
+  // empty patterns and comments match nothing.
+  if (!options.nocomment && pattern.charAt(0) === '#') {
+    this.comment = true;
+    return;
+  }
+  if (!pattern) {
+    this.empty = true;
+    return;
+  }
+
+  // step 1: figure out negation, etc.
+  this.parseNegate();
+
+  // step 2: expand braces
+  var set = this.globSet = this.braceExpand();
+  if (options.debug) this.debug = console.error;
+  this.debug(this.pattern, set);
+
+  // step 3: now we have a set, so turn each one into a series of path-portion
+  // matching patterns.
+  // These will be regexps, except in the case of "**", which is
+  // set to the GLOBSTAR object for globstar behavior,
+  // and will not contain any / characters
+  set = this.globParts = set.map(function (s) {
+    return s.split(slashSplit);
+  });
+  this.debug(this.pattern, set);
+
+  // glob --> regexps
+  set = set.map(function (s, si, set) {
+    return s.map(this.parse, this);
+  }, this);
+  this.debug(this.pattern, set);
+
+  // filter out everything that didn't compile properly.
+  set = set.filter(function (s) {
+    return s.indexOf(false) === -1;
+  });
+  this.debug(this.pattern, set);
+  this.set = set;
+}
+Minimatch.prototype.parseNegate = parseNegate;
+function parseNegate() {
+  var pattern = this.pattern;
+  var negate = false;
+  var options = this.options;
+  var negateOffset = 0;
+  if (options.nonegate) return;
+  for (var i = 0, l = pattern.length; i < l && pattern.charAt(i) === '!'; i++) {
+    negate = !negate;
+    negateOffset++;
+  }
+  if (negateOffset) this.pattern = pattern.substr(negateOffset);
+  this.negate = negate;
+}
+
+// Brace expansion:
+// a{b,c}d -> abd acd
+// a{b,}c -> abc ac
+// a{0..3}d -> a0d a1d a2d a3d
+// a{b,c{d,e}f}g -> abg acdfg acefg
+// a{b,c}d{e,f}g -> abdeg acdeg abdeg abdfg
+//
+// Invalid sets are not expanded.
+// a{2..}b -> a{2..}b
+// a{b}c -> a{b}c
+minimatch.braceExpand = function (pattern, options) {
+  return braceExpand(pattern, options);
+};
+Minimatch.prototype.braceExpand = braceExpand;
+function braceExpand(pattern, options) {
+  if (!options) {
+    if (this instanceof Minimatch) {
+      options = this.options;
+    } else {
+      options = {};
+    }
+  }
+  pattern = typeof pattern === 'undefined' ? this.pattern : pattern;
+  if (typeof pattern === 'undefined') {
+    throw new TypeError('undefined pattern');
+  }
+  if (options.nobrace || !pattern.match(/\{.*\}/)) {
+    // shortcut. no need to expand.
+    return [pattern];
+  }
+  return expand(pattern);
+}
+
+// parse a component of the expanded set.
+// At this point, no pattern may contain "/" in it
+// so we're going to return a 2d array, where each entry is the full
+// pattern, split on '/', and then turned into a regular expression.
+// A regexp is made at the end which joins each array with an
+// escaped /, and another full one which joins each regexp with |.
+//
+// Following the lead of Bash 4.1, note that "**" only has special meaning
+// when it is the *only* thing in a path portion.  Otherwise, any series
+// of * is equivalent to a single *.  Globstar behavior is enabled by
+// default, and can be disabled by setting options.noglobstar.
+Minimatch.prototype.parse = parse;
+var SUBPARSE = {};
+function parse(pattern, isSub) {
+  if (pattern.length > 1024 * 64) {
+    throw new TypeError('pattern is too long');
+  }
+  var options = this.options;
+
+  // shortcuts
+  if (!options.noglobstar && pattern === '**') return GLOBSTAR;
+  if (pattern === '') return '';
+  var re = '';
+  var hasMagic = !!options.nocase;
+  var escaping = false;
+  // ? => one single character
+  var patternListStack = [];
+  var negativeLists = [];
+  var stateChar;
+  var inClass = false;
+  var reClassStart = -1;
+  var classStart = -1;
+  // . and .. never match anything that doesn't start with .,
+  // even when options.dot is set.
+  var patternStart = pattern.charAt(0) === '.' ? '' // anything
+  // not (start or / followed by . or .. followed by / or end)
+  : options.dot ? '(?!(?:^|\\\/)\\.{1,2}(?:$|\\\/))' : '(?!\\.)';
+  var self = this;
+  function clearStateChar() {
+    if (stateChar) {
+      // we had some state-tracking character
+      // that wasn't consumed by this pass.
+      switch (stateChar) {
+        case '*':
+          re += star;
+          hasMagic = true;
+          break;
+        case '?':
+          re += qmark;
+          hasMagic = true;
+          break;
+        default:
+          re += '\\' + stateChar;
+          break;
+      }
+      self.debug('clearStateChar %j %j', stateChar, re);
+      stateChar = false;
+    }
+  }
+  for (var i = 0, len = pattern.length, c; i < len && (c = pattern.charAt(i)); i++) {
+    this.debug('%s\t%s %s %j', pattern, i, re, c);
+
+    // skip over any that are escaped.
+    if (escaping && reSpecials[c]) {
+      re += '\\' + c;
+      escaping = false;
+      continue;
+    }
+    switch (c) {
+      case '/':
+        // completely not allowed, even escaped.
+        // Should already be path-split by now.
+        return false;
+      case '\\':
+        clearStateChar();
+        escaping = true;
+        continue;
+
+      // the various stateChar values
+      // for the "extglob" stuff.
+      case '?':
+      case '*':
+      case '+':
+      case '@':
+      case '!':
+        this.debug('%s\t%s %s %j <-- stateChar', pattern, i, re, c);
+
+        // all of those are literals inside a class, except that
+        // the glob [!a] means [^a] in regexp
+        if (inClass) {
+          this.debug('  in class');
+          if (c === '!' && i === classStart + 1) c = '^';
+          re += c;
+          continue;
+        }
+
+        // if we already have a stateChar, then it means
+        // that there was something like ** or +? in there.
+        // Handle the stateChar, then proceed with this one.
+        self.debug('call clearStateChar %j', stateChar);
+        clearStateChar();
+        stateChar = c;
+        // if extglob is disabled, then +(asdf|foo) isn't a thing.
+        // just clear the statechar *now*, rather than even diving into
+        // the patternList stuff.
+        if (options.noext) clearStateChar();
+        continue;
+      case '(':
+        if (inClass) {
+          re += '(';
+          continue;
+        }
+        if (!stateChar) {
+          re += '\\(';
+          continue;
+        }
+        patternListStack.push({
+          type: stateChar,
+          start: i - 1,
+          reStart: re.length,
+          open: plTypes[stateChar].open,
+          close: plTypes[stateChar].close
+        });
+        // negation is (?:(?!js)[^/]*)
+        re += stateChar === '!' ? '(?:(?!(?:' : '(?:';
+        this.debug('plType %j %j', stateChar, re);
+        stateChar = false;
+        continue;
+      case ')':
+        if (inClass || !patternListStack.length) {
+          re += '\\)';
+          continue;
+        }
+        clearStateChar();
+        hasMagic = true;
+        var pl = patternListStack.pop();
+        // negation is (?:(?!js)[^/]*)
+        // The others are (?:<pattern>)<type>
+        re += pl.close;
+        if (pl.type === '!') {
+          negativeLists.push(pl);
+        }
+        pl.reEnd = re.length;
+        continue;
+      case '|':
+        if (inClass || !patternListStack.length || escaping) {
+          re += '\\|';
+          escaping = false;
+          continue;
+        }
+        clearStateChar();
+        re += '|';
+        continue;
+
+      // these are mostly the same in regexp and glob
+      case '[':
+        // swallow any state-tracking char before the [
+        clearStateChar();
+        if (inClass) {
+          re += '\\' + c;
+          continue;
+        }
+        inClass = true;
+        classStart = i;
+        reClassStart = re.length;
+        re += c;
+        continue;
+      case ']':
+        //  a right bracket shall lose its special
+        //  meaning and represent itself in
+        //  a bracket expression if it occurs
+        //  first in the list.  -- POSIX.2 2.8.3.2
+        if (i === classStart + 1 || !inClass) {
+          re += '\\' + c;
+          escaping = false;
+          continue;
+        }
+
+        // handle the case where we left a class open.
+        // "[z-a]" is valid, equivalent to "\[z-a\]"
+        if (inClass) {
+          // split where the last [ was, make sure we don't have
+          // an invalid re. if so, re-walk the contents of the
+          // would-be class to re-translate any characters that
+          // were passed through as-is
+          // TODO: It would probably be faster to determine this
+          // without a try/catch and a new RegExp, but it's tricky
+          // to do safely.  For now, this is safe and works.
+          var cs = pattern.substring(classStart + 1, i);
+          try {
+            RegExp('[' + cs + ']');
+          } catch (er) {
+            // not a valid class!
+            var sp = this.parse(cs, SUBPARSE);
+            re = re.substr(0, reClassStart) + '\\[' + sp[0] + '\\]';
+            hasMagic = hasMagic || sp[1];
+            inClass = false;
+            continue;
+          }
+        }
+
+        // finish up the class.
+        hasMagic = true;
+        inClass = false;
+        re += c;
+        continue;
+      default:
+        // swallow any state char that wasn't consumed
+        clearStateChar();
+        if (escaping) {
+          // no need
+          escaping = false;
+        } else if (reSpecials[c] && !(c === '^' && inClass)) {
+          re += '\\';
+        }
+        re += c;
+    } // switch
+  } // for
+
+  // handle the case where we left a class open.
+  // "[abc" is valid, equivalent to "\[abc"
+  if (inClass) {
+    // split where the last [ was, and escape it
+    // this is a huge pita.  We now have to re-walk
+    // the contents of the would-be class to re-translate
+    // any characters that were passed through as-is
+    cs = pattern.substr(classStart + 1);
+    sp = this.parse(cs, SUBPARSE);
+    re = re.substr(0, reClassStart) + '\\[' + sp[0];
+    hasMagic = hasMagic || sp[1];
+  }
+
+  // handle the case where we had a +( thing at the *end*
+  // of the pattern.
+  // each pattern list stack adds 3 chars, and we need to go through
+  // and escape any | chars that were passed through as-is for the regexp.
+  // Go through and escape them, taking care not to double-escape any
+  // | chars that were already escaped.
+  for (pl = patternListStack.pop(); pl; pl = patternListStack.pop()) {
+    var tail = re.slice(pl.reStart + pl.open.length);
+    this.debug('setting tail', re, pl);
+    // maybe some even number of \, then maybe 1 \, followed by a |
+    tail = tail.replace(/((?:\\{2}){0,64})(\\?)\|/g, function (_, $1, $2) {
+      if (!$2) {
+        // the | isn't already escaped, so escape it.
+        $2 = '\\';
+      }
+
+      // need to escape all those slashes *again*, without escaping the
+      // one that we need for escaping the | character.  As it works out,
+      // escaping an even number of slashes can be done by simply repeating
+      // it exactly after itself.  That's why this trick works.
+      //
+      // I am sorry that you have to see this.
+      return $1 + $1 + $2 + '|';
+    });
+    this.debug('tail=%j\n   %s', tail, tail, pl, re);
+    var t = pl.type === '*' ? star : pl.type === '?' ? qmark : '\\' + pl.type;
+    hasMagic = true;
+    re = re.slice(0, pl.reStart) + t + '\\(' + tail;
+  }
+
+  // handle trailing things that only matter at the very end.
+  clearStateChar();
+  if (escaping) {
+    // trailing \\
+    re += '\\\\';
+  }
+
+  // only need to apply the nodot start if the re starts with
+  // something that could conceivably capture a dot
+  var addPatternStart = false;
+  switch (re.charAt(0)) {
+    case '.':
+    case '[':
+    case '(':
+      addPatternStart = true;
+  }
+
+  // Hack to work around lack of negative lookbehind in JS
+  // A pattern like: *.!(x).!(y|z) needs to ensure that a name
+  // like 'a.xyz.yz' doesn't match.  So, the first negative
+  // lookahead, has to look ALL the way ahead, to the end of
+  // the pattern.
+  for (var n = negativeLists.length - 1; n > -1; n--) {
+    var nl = negativeLists[n];
+    var nlBefore = re.slice(0, nl.reStart);
+    var nlFirst = re.slice(nl.reStart, nl.reEnd - 8);
+    var nlLast = re.slice(nl.reEnd - 8, nl.reEnd);
+    var nlAfter = re.slice(nl.reEnd);
+    nlLast += nlAfter;
+
+    // Handle nested stuff like *(*.js|!(*.json)), where open parens
+    // mean that we should *not* include the ) in the bit that is considered
+    // "after" the negated section.
+    var openParensBefore = nlBefore.split('(').length - 1;
+    var cleanAfter = nlAfter;
+    for (i = 0; i < openParensBefore; i++) {
+      cleanAfter = cleanAfter.replace(/\)[+*?]?/, '');
+    }
+    nlAfter = cleanAfter;
+    var dollar = '';
+    if (nlAfter === '' && isSub !== SUBPARSE) {
+      dollar = '$';
+    }
+    var newRe = nlBefore + nlFirst + nlAfter + dollar + nlLast;
+    re = newRe;
+  }
+
+  // if the re is not "" at this point, then we need to make sure
+  // it doesn't match against an empty path part.
+  // Otherwise a/* will match a/, which it should not.
+  if (re !== '' && hasMagic) {
+    re = '(?=.)' + re;
+  }
+  if (addPatternStart) {
+    re = patternStart + re;
+  }
+
+  // parsing just a piece of a larger pattern.
+  if (isSub === SUBPARSE) {
+    return [re, hasMagic];
+  }
+
+  // skip the regexp for non-magical patterns
+  // unescape anything in it, though, so that it'll be
+  // an exact match against a file etc.
+  if (!hasMagic) {
+    return globUnescape(pattern);
+  }
+  var flags = options.nocase ? 'i' : '';
+  try {
+    var regExp = new RegExp('^' + re + '$', flags);
+  } catch (er) {
+    // If it was an invalid regular expression, then it can't match
+    // anything.  This trick looks for a character after the end of
+    // the string, which is of course impossible, except in multi-line
+    // mode, but it's not a /m regex.
+    return new RegExp('$.');
+  }
+  regExp._glob = pattern;
+  regExp._src = re;
+  return regExp;
+}
+minimatch.makeRe = function (pattern, options) {
+  return new Minimatch(pattern, options || {}).makeRe();
+};
+Minimatch.prototype.makeRe = makeRe;
+function makeRe() {
+  if (this.regexp || this.regexp === false) return this.regexp;
+
+  // at this point, this.set is a 2d array of partial
+  // pattern strings, or "**".
+  //
+  // It's better to use .match().  This function shouldn't
+  // be used, really, but it's pretty convenient sometimes,
+  // when you just want to work with a regex.
+  var set = this.set;
+  if (!set.length) {
+    this.regexp = false;
+    return this.regexp;
+  }
+  var options = this.options;
+  var twoStar = options.noglobstar ? star : options.dot ? twoStarDot : twoStarNoDot;
+  var flags = options.nocase ? 'i' : '';
+  var re = set.map(function (pattern) {
+    return pattern.map(function (p) {
+      return p === GLOBSTAR ? twoStar : typeof p === 'string' ? regExpEscape(p) : p._src;
+    }).join('\\\/');
+  }).join('|');
+
+  // must match entire pattern
+  // ending in a * or ** will make it less strict.
+  re = '^(?:' + re + ')$';
+
+  // can match anything, as long as it's not this.
+  if (this.negate) re = '^(?!' + re + ').*$';
+  try {
+    this.regexp = new RegExp(re, flags);
+  } catch (ex) {
+    this.regexp = false;
+  }
+  return this.regexp;
+}
+minimatch.match = function (list, pattern, options) {
+  options = options || {};
+  var mm = new Minimatch(pattern, options);
+  list = list.filter(function (f) {
+    return mm.match(f);
+  });
+  if (mm.options.nonull && !list.length) {
+    list.push(pattern);
+  }
+  return list;
+};
+Minimatch.prototype.match = match;
+function match(f, partial) {
+  this.debug('match', f, this.pattern);
+  // short-circuit in the case of busted things.
+  // comments, etc.
+  if (this.comment) return false;
+  if (this.empty) return f === '';
+  if (f === '/' && partial) return true;
+  var options = this.options;
+
+  // windows: need to use /, not \
+  if (path.sep !== '/') {
+    f = f.split(path.sep).join('/');
+  }
+
+  // treat the test path as a set of pathparts.
+  f = f.split(slashSplit);
+  this.debug(this.pattern, 'split', f);
+
+  // just ONE of the pattern sets in this.set needs to match
+  // in order for it to be valid.  If negating, then just one
+  // match means that we have failed.
+  // Either way, return on the first hit.
+
+  var set = this.set;
+  this.debug(this.pattern, 'set', set);
+
+  // Find the basename of the path by looking for the last non-empty segment
+  var filename;
+  var i;
+  for (i = f.length - 1; i >= 0; i--) {
+    filename = f[i];
+    if (filename) break;
+  }
+  for (i = 0; i < set.length; i++) {
+    var pattern = set[i];
+    var file = f;
+    if (options.matchBase && pattern.length === 1) {
+      file = [filename];
+    }
+    var hit = this.matchOne(file, pattern, partial);
+    if (hit) {
+      if (options.flipNegate) return true;
+      return !this.negate;
+    }
+  }
+
+  // didn't get any hits.  this is success if it's a negative
+  // pattern, failure otherwise.
+  if (options.flipNegate) return false;
+  return this.negate;
+}
+
+// set partial to true to test if, for example,
+// "/a/b" matches the start of "/*/b/*/d"
+// Partial means, if you run out of file before you run
+// out of pattern, then that's fine, as long as all
+// the parts match.
+Minimatch.prototype.matchOne = function (file, pattern, partial) {
+  var options = this.options;
+  this.debug('matchOne', {
+    'this': this,
+    file: file,
+    pattern: pattern
+  });
+  this.debug('matchOne', file.length, pattern.length);
+  for (var fi = 0, pi = 0, fl = file.length, pl = pattern.length; fi < fl && pi < pl; fi++, pi++) {
+    this.debug('matchOne loop');
+    var p = pattern[pi];
+    var f = file[fi];
+    this.debug(pattern, p, f);
+
+    // should be impossible.
+    // some invalid regexp stuff in the set.
+    if (p === false) return false;
+    if (p === GLOBSTAR) {
+      this.debug('GLOBSTAR', [pattern, p, f]);
+
+      // "**"
+      // a/**/b/**/c would match the following:
+      // a/b/x/y/z/c
+      // a/x/y/z/b/c
+      // a/b/x/b/x/c
+      // a/b/c
+      // To do this, take the rest of the pattern after
+      // the **, and see if it would match the file remainder.
+      // If so, return success.
+      // If not, the ** "swallows" a segment, and try again.
+      // This is recursively awful.
+      //
+      // a/**/b/**/c matching a/b/x/y/z/c
+      // - a matches a
+      // - doublestar
+      //   - matchOne(b/x/y/z/c, b/**/c)
+      //     - b matches b
+      //     - doublestar
+      //       - matchOne(x/y/z/c, c) -> no
+      //       - matchOne(y/z/c, c) -> no
+      //       - matchOne(z/c, c) -> no
+      //       - matchOne(c, c) yes, hit
+      var fr = fi;
+      var pr = pi + 1;
+      if (pr === pl) {
+        this.debug('** at the end');
+        // a ** at the end will just swallow the rest.
+        // We have found a match.
+        // however, it will not swallow /.x, unless
+        // options.dot is set.
+        // . and .. are *never* matched by **, for explosively
+        // exponential reasons.
+        for (; fi < fl; fi++) {
+          if (file[fi] === '.' || file[fi] === '..' || !options.dot && file[fi].charAt(0) === '.') return false;
+        }
+        return true;
+      }
+
+      // ok, let's see if we can swallow whatever we can.
+      while (fr < fl) {
+        var swallowee = file[fr];
+        this.debug('\nglobstar while', file, fr, pattern, pr, swallowee);
+
+        // XXX remove this slice.  Just pass the start index.
+        if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
+          this.debug('globstar found match!', fr, fl, swallowee);
+          // found a match.
+          return true;
+        } else {
+          // can't swallow "." or ".." ever.
+          // can only swallow ".foo" when explicitly asked.
+          if (swallowee === '.' || swallowee === '..' || !options.dot && swallowee.charAt(0) === '.') {
+            this.debug('dot detected!', file, fr, pattern, pr);
+            break;
+          }
+
+          // ** swallows a segment, and continue.
+          this.debug('globstar swallow a segment, and continue');
+          fr++;
+        }
+      }
+
+      // no match was found.
+      // However, in partial mode, we can't say this is necessarily over.
+      // If there's more *pattern* left, then
+      if (partial) {
+        // ran out of file
+        this.debug('\n>>> no match, partial?', file, fr, pattern, pr);
+        if (fr === fl) return true;
+      }
+      return false;
+    }
+
+    // something other than **
+    // non-magic patterns just have to match exactly
+    // patterns with magic have been turned into regexps.
+    var hit;
+    if (typeof p === 'string') {
+      if (options.nocase) {
+        hit = f.toLowerCase() === p.toLowerCase();
+      } else {
+        hit = f === p;
+      }
+      this.debug('string match', p, f, hit);
+    } else {
+      hit = f.match(p);
+      this.debug('pattern match', p, f, hit);
+    }
+    if (!hit) return false;
+  }
+
+  // Note: ending in / means that we'll get a final ""
+  // at the end of the pattern.  This can only match a
+  // corresponding "" at the end of the file.
+  // If the file ends in /, then it can only match a
+  // a pattern that ends in /, unless the pattern just
+  // doesn't have any more for it. But, a/b/ should *not*
+  // match "a/b/*", even though "" matches against the
+  // [^/]*? pattern, except in partial mode, where it might
+  // simply not be reached yet.
+  // However, a/b/ should still satisfy a/*
+
+  // now either we fell off the end of the pattern, or we're done.
+  if (fi === fl && pi === pl) {
+    // ran out of pattern and filename at the same time.
+    // an exact hit!
+    return true;
+  } else if (fi === fl) {
+    // ran out of file, but still had pattern left.
+    // this is ok if we're doing the match as part of
+    // a glob fs traversal.
+    return partial;
+  } else if (pi === pl) {
+    // ran out of pattern, still have file left.
+    // this is only acceptable if we're on the very last
+    // empty segment of a file with a trailing slash.
+    // a/* should match a/b/
+    var emptyFileEnd = fi === fl - 1 && file[fi] === '';
+    return emptyFileEnd;
+  }
+
+  // should be unreachable.
+  throw new Error('wtf?');
+};
+
+// replace stuff like \* with *
+function globUnescape(s) {
+  return s.replace(/\\(.)/g, '$1');
+}
+function regExpEscape(s) {
+  return s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
 
 /***/ }),
 
@@ -3093,11 +3756,8 @@ exports.onRenderBody = onRenderBody;
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 var _fs = _interopRequireDefault(__webpack_require__(/*! fs */ "fs"));
-
 var _path = _interopRequireDefault(__webpack_require__(/*! path */ "path"));
-
 exports.favicons = [{
   src: "favicon-32x32.png",
   sizes: "32x32",
@@ -3150,7 +3810,6 @@ exports.doesIconExist = function doesIconExist(srcIcon) {
     if (e.code !== "ENOENT") {
       throw e;
     }
-
     return false;
   }
 };
@@ -3159,18 +3818,14 @@ exports.doesIconExist = function doesIconExist(srcIcon) {
  * @param {string} digest The digest of the icon provided in the plugin's options.
  */
 
-
 exports.addDigestToPath = function (path, digest, method) {
   if (method === "name") {
     var parsedPath = _path.default.parse(path);
-
     return parsedPath.dir + "/" + parsedPath.name + "-" + digest + parsedPath.ext;
   }
-
   if (method === "query") {
     return path + "?v=" + digest;
   }
-
   return path;
 };
 
@@ -3187,36 +3842,30 @@ exports.addDigestToPath = function (path, digest, method) {
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
 var React = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
-
 var _gatsby = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-
 var _common = __webpack_require__(/*! ./common.js */ "./node_modules/gatsby-plugin-manifest/common.js");
+var _getManifestPathname = _interopRequireDefault(__webpack_require__(/*! ./get-manifest-pathname */ "./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js"));
 
-var _getManifestPathname = _interopRequireDefault(__webpack_require__(/*! ./get-manifest-pathname */ "./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js")); // TODO: remove for v3
-
-
+// TODO: remove for v3
 var withPrefix = _gatsby.withAssetPrefix || _gatsby.withPrefix;
-
 exports.onRenderBody = function (_ref, _ref2) {
   var setHeadComponents = _ref.setHeadComponents,
-      _ref$pathname = _ref.pathname,
-      pathname = _ref$pathname === void 0 ? "/" : _ref$pathname;
+    _ref$pathname = _ref.pathname,
+    pathname = _ref$pathname === void 0 ? "/" : _ref$pathname;
   var localize = _ref2.localize,
-      legacy = _ref2.legacy,
-      cacheBusting = _ref2.cache_busting_mode,
-      cacheDigest = _ref2.cacheDigest,
-      icon = _ref2.icon,
-      pluginIcons = _ref2.icons,
-      insertFaviconLinkTag = _ref2.include_favicon,
-      insertMetaTag = _ref2.theme_color_in_head,
-      theme_color = _ref2.theme_color,
-      _ref2$crossOrigin = _ref2.crossOrigin,
-      crossOrigin = _ref2$crossOrigin === void 0 ? "anonymous" : _ref2$crossOrigin; // We use this to build a final array to pass as the argument to setHeadComponents at the end of onRenderBody.
-
+    legacy = _ref2.legacy,
+    cacheBusting = _ref2.cache_busting_mode,
+    cacheDigest = _ref2.cacheDigest,
+    icon = _ref2.icon,
+    pluginIcons = _ref2.icons,
+    insertFaviconLinkTag = _ref2.include_favicon,
+    insertMetaTag = _ref2.theme_color_in_head,
+    theme_color = _ref2.theme_color,
+    _ref2$crossOrigin = _ref2.crossOrigin,
+    crossOrigin = _ref2$crossOrigin === void 0 ? "anonymous" : _ref2$crossOrigin;
+  // We use this to build a final array to pass as the argument to setHeadComponents at the end of onRenderBody.
   var headComponents = [];
   var srcIconExists = !!icon;
   var icons = pluginIcons || _common.defaultIcons;
@@ -3232,7 +3881,6 @@ exports.onRenderBody = function (_ref, _ref2) {
           type: "image/png"
         }));
       });
-
       if (icon === null || icon === void 0 ? void 0 : icon.endsWith(".svg")) {
         headComponents.push( /*#__PURE__*/React.createElement("link", {
           key: "gatsby-plugin-manifest-icon-link-svg",
@@ -3243,7 +3891,6 @@ exports.onRenderBody = function (_ref, _ref2) {
       }
     }
   } // Add manifest link tag.
-
 
   headComponents.push( /*#__PURE__*/React.createElement("link", {
     key: "gatsby-plugin-manifest-link",
@@ -3259,7 +3906,6 @@ exports.onRenderBody = function (_ref, _ref2) {
       content: theme_color
     }));
   }
-
   if (legacy) {
     icons.forEach(function (icon) {
       headComponents.push( /*#__PURE__*/React.createElement("link", {
@@ -3270,7 +3916,6 @@ exports.onRenderBody = function (_ref, _ref2) {
       }));
     });
   }
-
   setHeadComponents(headComponents);
   return true;
 };
@@ -3289,6 +3934,7 @@ exports.onRenderBody = function (_ref, _ref2) {
 
 exports.__esModule = true;
 exports.default = void 0;
+
 /**
  * Get a manifest filename depending on localized pathname
  *
@@ -3296,25 +3942,19 @@ exports.default = void 0;
  * @param {Array<{start_url: string, lang: string}>} localizedManifests
  * @return string
  */
-
 var _default = function _default(pathname, localizedManifests) {
   var defaultFilename = "manifest.webmanifest";
-
   if (!Array.isArray(localizedManifests)) {
     return defaultFilename;
   }
-
   var localizedManifest = localizedManifests.find(function (app) {
     return pathname.startsWith(app.start_url);
   });
-
   if (!localizedManifest) {
     return defaultFilename;
   }
-
   return "manifest_" + localizedManifest.lang + ".webmanifest";
 };
-
 exports.default = _default;
 
 /***/ }),
@@ -3330,36 +3970,29 @@ exports.default = _default;
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 exports.__esModule = true;
 exports.onRenderBody = exports.onPreRenderHTML = void 0;
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
 var onPreRenderHTML = function onPreRenderHTML(_ref) {
   var getHeadComponents = _ref.getHeadComponents,
-      pathname = _ref.pathname,
-      replaceHeadComponents = _ref.replaceHeadComponents;
+    pathname = _ref.pathname,
+    replaceHeadComponents = _ref.replaceHeadComponents;
   if (pathname !== "/offline-plugin-app-shell-fallback/") return;
   var headComponents = getHeadComponents();
   var filteredHeadComponents = headComponents.filter(function (_ref2) {
     var type = _ref2.type,
-        props = _ref2.props;
+      props = _ref2.props;
     return !(type === "link" && props.as === "fetch" && props.rel === "preload" && (props.href.startsWith("/static/d/") || props.href.startsWith("/page-data/")));
   });
   replaceHeadComponents(filteredHeadComponents);
 };
-
 exports.onPreRenderHTML = onPreRenderHTML;
-
 var onRenderBody = function onRenderBody(_ref3) {
   var pathname = _ref3.pathname,
-      setHeadComponents = _ref3.setHeadComponents;
-
+    setHeadComponents = _ref3.setHeadComponents;
   if (pathname !== "/offline-plugin-app-shell-fallback/") {
     return;
   }
-
   setHeadComponents([/*#__PURE__*/_react.default.createElement("noscript", {
     key: "disable-offline-shell"
   }, /*#__PURE__*/_react.default.createElement("meta", {
@@ -3367,7 +4000,6 @@ var onRenderBody = function onRenderBody(_ref3) {
     content: "0;url=/.gatsby-plugin-offline:api=disableOfflineShell&redirect=true"
   }))]);
 };
-
 exports.onRenderBody = onRenderBody;
 
 /***/ }),
@@ -3384,28 +4016,21 @@ exports.onRenderBody = onRenderBody;
 
 exports.__esModule = true;
 exports.onRenderBody = void 0;
-
 var _reactHelmet = __webpack_require__(/*! react-helmet */ "react-helmet");
-
 var onRenderBody = function onRenderBody(_ref) {
   var setHeadComponents = _ref.setHeadComponents,
-      setHtmlAttributes = _ref.setHtmlAttributes,
-      setBodyAttributes = _ref.setBodyAttributes;
-
+    setHtmlAttributes = _ref.setHtmlAttributes,
+    setBodyAttributes = _ref.setBodyAttributes;
   var helmet = _reactHelmet.Helmet.renderStatic(); // These action functions were added partway through the Gatsby 1.x cycle.
-
 
   if (setHtmlAttributes) {
     setHtmlAttributes(helmet.htmlAttributes.toComponent());
   }
-
   if (setBodyAttributes) {
     setBodyAttributes(helmet.bodyAttributes.toComponent());
   }
-
   setHeadComponents([helmet.title.toComponent(), helmet.link.toComponent(), helmet.meta.toComponent(), helmet.noscript.toComponent(), helmet.script.toComponent(), helmet.style.toComponent(), helmet.base.toComponent()]);
 };
-
 exports.onRenderBody = onRenderBody;
 
 /***/ }),
@@ -3421,33 +4046,24 @@ exports.onRenderBody = onRenderBody;
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
 var _gatsby = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+var _internals = __webpack_require__(/*! ./internals */ "./node_modules/gatsby-plugin-sitemap/internals.js");
 
-var _internals = __webpack_require__(/*! ./internals */ "./node_modules/gatsby-plugin-sitemap/internals.js"); // TODO: remove for v3
-
-
+// TODO: remove for v3
 var withPrefix = _gatsby.withAssetPrefix || _gatsby.withPrefix;
-
 exports.onRenderBody = function (_ref, pluginOptions) {
   var setHeadComponents = _ref.setHeadComponents;
-
   var _defaultOptions$plugi = (0, _extends2.default)({}, _internals.defaultOptions, pluginOptions),
-      output = _defaultOptions$plugi.output,
-      createLinkInHead = _defaultOptions$plugi.createLinkInHead;
-
+    output = _defaultOptions$plugi.output,
+    createLinkInHead = _defaultOptions$plugi.createLinkInHead;
   if (!createLinkInHead) {
     return;
   }
-
   if (output.charAt(0) !== "/") {
     output = "/" + output;
   }
-
   setHeadComponents([/*#__PURE__*/_react.default.createElement("link", {
     key: "gatsby-plugin-sitemap",
     rel: "sitemap",
@@ -3469,52 +4085,37 @@ exports.onRenderBody = function (_ref, pluginOptions) {
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 exports.__esModule = true;
 exports.filterQuery = filterQuery;
 exports.defaultOptions = exports.renameFile = exports.writeFile = exports.withoutTrailingSlash = void 0;
-
 var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
-
 var _fs = _interopRequireDefault(__webpack_require__(/*! fs */ "fs"));
-
-var _pify = _interopRequireDefault(__webpack_require__(/*! pify */ "./node_modules/gatsby-plugin-sitemap/node_modules/pify/index.js"));
-
+var _pify = _interopRequireDefault(__webpack_require__(/*! pify */ "./node_modules/pify/index.js"));
 var _minimatch = _interopRequireDefault(__webpack_require__(/*! minimatch */ "./node_modules/minimatch/minimatch.js"));
-
 var withoutTrailingSlash = function withoutTrailingSlash(path) {
   return path === "/" ? path : path.replace(/\/$/, "");
 };
-
 exports.withoutTrailingSlash = withoutTrailingSlash;
 var writeFile = (0, _pify.default)(_fs.default.writeFile);
 exports.writeFile = writeFile;
 var renameFile = (0, _pify.default)(_fs.default.rename);
 exports.renameFile = renameFile;
-
 function filterQuery(results, excludes, pathPrefix, resolveSiteUrl) {
   var _allSitePage;
-
   if (resolveSiteUrl === void 0) {
     resolveSiteUrl = defaultOptions.resolveSiteUrl;
   }
-
   var errors = results.errors,
-      data = results.data;
-
+    data = results.data;
   if (errors) {
     throw new Error(errors.join(", "));
   }
-
   var allSitePage = data.allSitePage,
-      otherData = (0, _objectWithoutPropertiesLoose2.default)(data, ["allSitePage"]);
-
+    otherData = (0, _objectWithoutPropertiesLoose2.default)(data, ["allSitePage"]);
   var _getNodes = getNodes(allSitePage),
-      allPages = _getNodes.allPages,
-      originalType = _getNodes.originalType; // Removing excluded paths
-
+    allPages = _getNodes.allPages,
+    originalType = _getNodes.originalType; // Removing excluded paths
 
   allPages = allPages.filter(function (page) {
     return !excludes.some(function (excludedRoute) {
@@ -3528,11 +4129,9 @@ function filterQuery(results, excludes, pathPrefix, resolveSiteUrl) {
   }); // siteUrl Validation
 
   var siteUrl = resolveSiteUrl(data);
-
   if (!siteUrl || siteUrl.trim().length == 0) {
     throw new Error("SiteMetaData 'siteUrl' property is required and cannot be left empty. Check out the documentation to see a working example: https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/#how-to-use");
   } // remove trailing slash of siteUrl
-
 
   siteUrl = withoutTrailingSlash(siteUrl);
   return (0, _extends2.default)({}, otherData, {
@@ -3548,7 +4147,6 @@ function filterQuery(results, excludes, pathPrefix, resolveSiteUrl) {
     }
   });
 }
-
 var defaultOptions = {
   query: "\n    {\n      site {\n        siteMetadata {\n          siteUrl\n        }\n      }\n\n      allSitePage {\n        edges {\n          node {\n            path\n          }\n        }\n      }\n  }",
   output: "/sitemap.xml",
@@ -3556,14 +4154,11 @@ var defaultOptions = {
   createLinkInHead: true,
   serialize: function serialize(_ref) {
     var site = _ref.site,
-        allSitePage = _ref.allSitePage;
-
+      allSitePage = _ref.allSitePage;
     var _getNodes2 = getNodes(allSitePage),
-        allPages = _getNodes2.allPages;
-
+      allPages = _getNodes2.allPages;
     return allPages === null || allPages === void 0 ? void 0 : allPages.map(function (page) {
       var _site$siteMetadata$si, _site$siteMetadata;
-
       return {
         url: "" + ((_site$siteMetadata$si = (_site$siteMetadata = site.siteMetadata) === null || _site$siteMetadata === void 0 ? void 0 : _site$siteMetadata.siteUrl) !== null && _site$siteMetadata$si !== void 0 ? _site$siteMetadata$si : "") + page.path,
         changefreq: "daily",
@@ -3576,7 +4171,6 @@ var defaultOptions = {
   }
 };
 exports.defaultOptions = defaultOptions;
-
 function getNodes(results) {
   if ("nodes" in results) {
     return {
@@ -3584,10 +4178,8 @@ function getNodes(results) {
       originalType: "nodes"
     };
   }
-
   if ("edges" in results) {
     var _results$edges;
-
     return {
       allPages: results === null || results === void 0 ? void 0 : (_results$edges = results.edges) === null || _results$edges === void 0 ? void 0 : _results$edges.map(function (edge) {
         return edge.node;
@@ -3595,107 +4187,8 @@ function getNodes(results) {
       originalType: "edges"
     };
   }
-
   throw new Error("[gatsby-plugin-sitemap]: Plugin is unsure how to handle the results of your query, you'll need to write custom page filter and serializer in your gatsby config");
 }
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-sitemap/node_modules/pify/index.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-sitemap/node_modules/pify/index.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const processFn = (fn, opts) => function () {
-  const P = opts.promiseModule;
-  const args = new Array(arguments.length);
-
-  for (let i = 0; i < arguments.length; i++) {
-    args[i] = arguments[i];
-  }
-
-  return new P((resolve, reject) => {
-    if (opts.errorFirst) {
-      args.push(function (err, result) {
-        if (opts.multiArgs) {
-          const results = new Array(arguments.length - 1);
-
-          for (let i = 1; i < arguments.length; i++) {
-            results[i - 1] = arguments[i];
-          }
-
-          if (err) {
-            results.unshift(err);
-            reject(results);
-          } else {
-            resolve(results);
-          }
-        } else if (err) {
-          reject(err);
-        } else {
-          resolve(result);
-        }
-      });
-    } else {
-      args.push(function (result) {
-        if (opts.multiArgs) {
-          const results = new Array(arguments.length - 1);
-
-          for (let i = 0; i < arguments.length; i++) {
-            results[i] = arguments[i];
-          }
-
-          resolve(results);
-        } else {
-          resolve(result);
-        }
-      });
-    }
-
-    fn.apply(this, args);
-  });
-};
-
-module.exports = (obj, opts) => {
-  opts = Object.assign({
-    exclude: [/.+(Sync|Stream)$/],
-    errorFirst: true,
-    promiseModule: Promise
-  }, opts);
-
-  const filter = key => {
-    const match = pattern => typeof pattern === 'string' ? key === pattern : pattern.test(key);
-
-    return opts.include ? opts.include.some(match) : !opts.exclude.some(match);
-  };
-
-  let ret;
-
-  if (typeof obj === 'function') {
-    ret = function () {
-      if (opts.excludeMain) {
-        return obj.apply(this, arguments);
-      }
-
-      return processFn(obj, opts).apply(this, arguments);
-    };
-  } else {
-    ret = Object.create(Object.getPrototypeOf(obj));
-  }
-
-  for (const key in obj) {
-    // eslint-disable-line guard-for-in
-    const x = obj[key];
-    ret[key] = typeof x === 'function' && filter(key) ? processFn(x, opts) : x;
-  }
-
-  return ret;
-};
 
 /***/ }),
 
@@ -3710,28 +4203,23 @@ module.exports = (obj, opts) => {
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-
 var sheetByPathname = new Map(); // eslint-disable-next-line react/prop-types,react/display-name
 
 exports.wrapRootElement = function (_ref) {
   var element = _ref.element,
-      pathname = _ref.pathname;
+    pathname = _ref.pathname;
   var sheet = new _styledComponents.ServerStyleSheet();
   sheetByPathname.set(pathname, sheet);
   return /*#__PURE__*/_react.default.createElement(_styledComponents.StyleSheetManager, {
     sheet: sheet.instance
   }, element);
 };
-
 exports.onRenderBody = function (_ref2) {
   var setHeadComponents = _ref2.setHeadComponents,
-      pathname = _ref2.pathname;
+    pathname = _ref2.pathname;
   var sheet = sheetByPathname.get(pathname);
-
   if (sheet) {
     setHeadComponents([sheet.getStyleElement()]);
     sheetByPathname.delete(pathname);
@@ -4572,12 +5060,25 @@ function isType(payload, type) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+var safeIsNaN = Number.isNaN ||
+    function ponyfill(value) {
+        return typeof value === 'number' && value !== value;
+    };
+function isEqual(first, second) {
+    if (first === second) {
+        return true;
+    }
+    if (safeIsNaN(first) && safeIsNaN(second)) {
+        return true;
+    }
+    return false;
+}
 function areInputsEqual(newInputs, lastInputs) {
     if (newInputs.length !== lastInputs.length) {
         return false;
     }
     for (var i = 0; i < newInputs.length; i++) {
-        if (newInputs[i] !== lastInputs[i]) {
+        if (!isEqual(newInputs[i], lastInputs[i])) {
             return false;
         }
     }
@@ -4763,10 +5264,10 @@ function concatArrays(originVal, newVal) {
 module.exports = minimatch
 minimatch.Minimatch = Minimatch
 
-var path = { sep: '/' }
-try {
-  path = __webpack_require__(/*! path */ "path")
-} catch (er) {}
+var path = (function () { try { return __webpack_require__(/*! path */ "path") } catch (e) {}}()) || {
+  sep: '/'
+}
+minimatch.sep = path.sep
 
 var GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {}
 var expand = __webpack_require__(/*! brace-expansion */ "./node_modules/brace-expansion/index.js")
@@ -4818,43 +5319,64 @@ function filter (pattern, options) {
 }
 
 function ext (a, b) {
-  a = a || {}
   b = b || {}
   var t = {}
-  Object.keys(b).forEach(function (k) {
-    t[k] = b[k]
-  })
   Object.keys(a).forEach(function (k) {
     t[k] = a[k]
+  })
+  Object.keys(b).forEach(function (k) {
+    t[k] = b[k]
   })
   return t
 }
 
 minimatch.defaults = function (def) {
-  if (!def || !Object.keys(def).length) return minimatch
+  if (!def || typeof def !== 'object' || !Object.keys(def).length) {
+    return minimatch
+  }
 
   var orig = minimatch
 
   var m = function minimatch (p, pattern, options) {
-    return orig.minimatch(p, pattern, ext(def, options))
+    return orig(p, pattern, ext(def, options))
   }
 
   m.Minimatch = function Minimatch (pattern, options) {
     return new orig.Minimatch(pattern, ext(def, options))
+  }
+  m.Minimatch.defaults = function defaults (options) {
+    return orig.defaults(ext(def, options)).Minimatch
+  }
+
+  m.filter = function filter (pattern, options) {
+    return orig.filter(pattern, ext(def, options))
+  }
+
+  m.defaults = function defaults (options) {
+    return orig.defaults(ext(def, options))
+  }
+
+  m.makeRe = function makeRe (pattern, options) {
+    return orig.makeRe(pattern, ext(def, options))
+  }
+
+  m.braceExpand = function braceExpand (pattern, options) {
+    return orig.braceExpand(pattern, ext(def, options))
+  }
+
+  m.match = function (list, pattern, options) {
+    return orig.match(list, pattern, ext(def, options))
   }
 
   return m
 }
 
 Minimatch.defaults = function (def) {
-  if (!def || !Object.keys(def).length) return Minimatch
   return minimatch.defaults(def).Minimatch
 }
 
 function minimatch (p, pattern, options) {
-  if (typeof pattern !== 'string') {
-    throw new TypeError('glob pattern string required')
-  }
+  assertValidPattern(pattern)
 
   if (!options) options = {}
 
@@ -4862,9 +5384,6 @@ function minimatch (p, pattern, options) {
   if (!options.nocomment && pattern.charAt(0) === '#') {
     return false
   }
-
-  // "" only matches ""
-  if (pattern.trim() === '') return p === ''
 
   return new Minimatch(pattern, options).match(p)
 }
@@ -4874,15 +5393,14 @@ function Minimatch (pattern, options) {
     return new Minimatch(pattern, options)
   }
 
-  if (typeof pattern !== 'string') {
-    throw new TypeError('glob pattern string required')
-  }
+  assertValidPattern(pattern)
 
   if (!options) options = {}
+
   pattern = pattern.trim()
 
   // windows support: need to use /, not \
-  if (path.sep !== '/') {
+  if (!options.allowWindowsEscape && path.sep !== '/') {
     pattern = pattern.split(path.sep).join('/')
   }
 
@@ -4893,6 +5411,7 @@ function Minimatch (pattern, options) {
   this.negate = false
   this.comment = false
   this.empty = false
+  this.partial = !!options.partial
 
   // make the set of regexps etc.
   this.make()
@@ -4902,9 +5421,6 @@ Minimatch.prototype.debug = function () {}
 
 Minimatch.prototype.make = make
 function make () {
-  // don't do it more than once.
-  if (this._made) return
-
   var pattern = this.pattern
   var options = this.options
 
@@ -4924,7 +5440,7 @@ function make () {
   // step 2: expand braces
   var set = this.globSet = this.braceExpand()
 
-  if (options.debug) this.debug = console.error
+  if (options.debug) this.debug = function debug() { console.error.apply(console, arguments) }
 
   this.debug(this.pattern, set)
 
@@ -5004,17 +5520,27 @@ function braceExpand (pattern, options) {
   pattern = typeof pattern === 'undefined'
     ? this.pattern : pattern
 
-  if (typeof pattern === 'undefined') {
-    throw new TypeError('undefined pattern')
-  }
+  assertValidPattern(pattern)
 
-  if (options.nobrace ||
-    !pattern.match(/\{.*\}/)) {
+  // Thanks to Yeting Li <https://github.com/yetingli> for
+  // improving this regexp to avoid a ReDOS vulnerability.
+  if (options.nobrace || !/\{(?:(?!\{).)*\}/.test(pattern)) {
     // shortcut. no need to expand.
     return [pattern]
   }
 
   return expand(pattern)
+}
+
+var MAX_PATTERN_LENGTH = 1024 * 64
+var assertValidPattern = function (pattern) {
+  if (typeof pattern !== 'string') {
+    throw new TypeError('invalid pattern')
+  }
+
+  if (pattern.length > MAX_PATTERN_LENGTH) {
+    throw new TypeError('pattern is too long')
+  }
 }
 
 // parse a component of the expanded set.
@@ -5031,14 +5557,17 @@ function braceExpand (pattern, options) {
 Minimatch.prototype.parse = parse
 var SUBPARSE = {}
 function parse (pattern, isSub) {
-  if (pattern.length > 1024 * 64) {
-    throw new TypeError('pattern is too long')
-  }
+  assertValidPattern(pattern)
 
   var options = this.options
 
   // shortcuts
-  if (!options.noglobstar && pattern === '**') return GLOBSTAR
+  if (pattern === '**') {
+    if (!options.noglobstar)
+      return GLOBSTAR
+    else
+      pattern = '*'
+  }
   if (pattern === '') return ''
 
   var re = ''
@@ -5094,10 +5623,12 @@ function parse (pattern, isSub) {
     }
 
     switch (c) {
-      case '/':
+      /* istanbul ignore next */
+      case '/': {
         // completely not allowed, even escaped.
         // Should already be path-split by now.
         return false
+      }
 
       case '\\':
         clearStateChar()
@@ -5216,25 +5747,23 @@ function parse (pattern, isSub) {
 
         // handle the case where we left a class open.
         // "[z-a]" is valid, equivalent to "\[z-a\]"
-        if (inClass) {
-          // split where the last [ was, make sure we don't have
-          // an invalid re. if so, re-walk the contents of the
-          // would-be class to re-translate any characters that
-          // were passed through as-is
-          // TODO: It would probably be faster to determine this
-          // without a try/catch and a new RegExp, but it's tricky
-          // to do safely.  For now, this is safe and works.
-          var cs = pattern.substring(classStart + 1, i)
-          try {
-            RegExp('[' + cs + ']')
-          } catch (er) {
-            // not a valid class!
-            var sp = this.parse(cs, SUBPARSE)
-            re = re.substr(0, reClassStart) + '\\[' + sp[0] + '\\]'
-            hasMagic = hasMagic || sp[1]
-            inClass = false
-            continue
-          }
+        // split where the last [ was, make sure we don't have
+        // an invalid re. if so, re-walk the contents of the
+        // would-be class to re-translate any characters that
+        // were passed through as-is
+        // TODO: It would probably be faster to determine this
+        // without a try/catch and a new RegExp, but it's tricky
+        // to do safely.  For now, this is safe and works.
+        var cs = pattern.substring(classStart + 1, i)
+        try {
+          RegExp('[' + cs + ']')
+        } catch (er) {
+          // not a valid class!
+          var sp = this.parse(cs, SUBPARSE)
+          re = re.substr(0, reClassStart) + '\\[' + sp[0] + '\\]'
+          hasMagic = hasMagic || sp[1]
+          inClass = false
+          continue
         }
 
         // finish up the class.
@@ -5318,9 +5847,7 @@ function parse (pattern, isSub) {
   // something that could conceivably capture a dot
   var addPatternStart = false
   switch (re.charAt(0)) {
-    case '.':
-    case '[':
-    case '(': addPatternStart = true
+    case '[': case '.': case '(': addPatternStart = true
   }
 
   // Hack to work around lack of negative lookbehind in JS
@@ -5382,7 +5909,7 @@ function parse (pattern, isSub) {
   var flags = options.nocase ? 'i' : ''
   try {
     var regExp = new RegExp('^' + re + '$', flags)
-  } catch (er) {
+  } catch (er) /* istanbul ignore next - should be impossible */ {
     // If it was an invalid regular expression, then it can't match
     // anything.  This trick looks for a character after the end of
     // the string, which is of course impossible, except in multi-line
@@ -5440,7 +5967,7 @@ function makeRe () {
 
   try {
     this.regexp = new RegExp(re, flags)
-  } catch (ex) {
+  } catch (ex) /* istanbul ignore next - should be impossible */ {
     this.regexp = false
   }
   return this.regexp
@@ -5458,8 +5985,8 @@ minimatch.match = function (list, pattern, options) {
   return list
 }
 
-Minimatch.prototype.match = match
-function match (f, partial) {
+Minimatch.prototype.match = function match (f, partial) {
+  if (typeof partial === 'undefined') partial = this.partial
   this.debug('match', f, this.pattern)
   // short-circuit in the case of busted things.
   // comments, etc.
@@ -5541,6 +6068,7 @@ Minimatch.prototype.matchOne = function (file, pattern, partial) {
 
     // should be impossible.
     // some invalid regexp stuff in the set.
+    /* istanbul ignore if */
     if (p === false) return false
 
     if (p === GLOBSTAR) {
@@ -5614,6 +6142,7 @@ Minimatch.prototype.matchOne = function (file, pattern, partial) {
       // no match was found.
       // However, in partial mode, we can't say this is necessarily over.
       // If there's more *pattern* left, then
+      /* istanbul ignore if */
       if (partial) {
         // ran out of file
         this.debug('\n>>> no match, partial?', file, fr, pattern, pr)
@@ -5627,11 +6156,7 @@ Minimatch.prototype.matchOne = function (file, pattern, partial) {
     // patterns with magic have been turned into regexps.
     var hit
     if (typeof p === 'string') {
-      if (options.nocase) {
-        hit = f.toLowerCase() === p.toLowerCase()
-      } else {
-        hit = f === p
-      }
+      hit = f === p
       this.debug('string match', p, f, hit)
     } else {
       hit = f.match(p)
@@ -5662,16 +6187,16 @@ Minimatch.prototype.matchOne = function (file, pattern, partial) {
     // this is ok if we're doing the match as part of
     // a glob fs traversal.
     return partial
-  } else if (pi === pl) {
+  } else /* istanbul ignore else */ if (pi === pl) {
     // ran out of pattern, still have file left.
     // this is only acceptable if we're on the very last
     // empty segment of a file with a trailing slash.
     // a/* should match a/b/
-    var emptyFileEnd = (fi === fl - 1) && (file[fi] === '')
-    return emptyFileEnd
+    return (fi === fl - 1) && (file[fi] === '')
   }
 
   // should be unreachable.
+  /* istanbul ignore next */
   throw new Error('wtf?')
 }
 
@@ -5866,6 +6391,102 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
+/***/ "./node_modules/pify/index.js":
+/*!************************************!*\
+  !*** ./node_modules/pify/index.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const processFn = (fn, opts) => function () {
+	const P = opts.promiseModule;
+	const args = new Array(arguments.length);
+
+	for (let i = 0; i < arguments.length; i++) {
+		args[i] = arguments[i];
+	}
+
+	return new P((resolve, reject) => {
+		if (opts.errorFirst) {
+			args.push(function (err, result) {
+				if (opts.multiArgs) {
+					const results = new Array(arguments.length - 1);
+
+					for (let i = 1; i < arguments.length; i++) {
+						results[i - 1] = arguments[i];
+					}
+
+					if (err) {
+						results.unshift(err);
+						reject(results);
+					} else {
+						resolve(results);
+					}
+				} else if (err) {
+					reject(err);
+				} else {
+					resolve(result);
+				}
+			});
+		} else {
+			args.push(function (result) {
+				if (opts.multiArgs) {
+					const results = new Array(arguments.length - 1);
+
+					for (let i = 0; i < arguments.length; i++) {
+						results[i] = arguments[i];
+					}
+
+					resolve(results);
+				} else {
+					resolve(result);
+				}
+			});
+		}
+
+		fn.apply(this, args);
+	});
+};
+
+module.exports = (obj, opts) => {
+	opts = Object.assign({
+		exclude: [/.+(Sync|Stream)$/],
+		errorFirst: true,
+		promiseModule: Promise
+	}, opts);
+
+	const filter = key => {
+		const match = pattern => typeof pattern === 'string' ? key === pattern : pattern.test(key);
+		return opts.include ? opts.include.some(match) : !opts.exclude.some(match);
+	};
+
+	let ret;
+	if (typeof obj === 'function') {
+		ret = function () {
+			if (opts.excludeMain) {
+				return obj.apply(this, arguments);
+			}
+
+			return processFn(obj, opts).apply(this, arguments);
+		};
+	} else {
+		ret = Object.create(Object.getPrototypeOf(obj));
+	}
+
+	for (const key in obj) { // eslint-disable-line guard-for-in
+		const x = obj[key];
+		ret[key] = typeof x === 'function' && filter(key) ? processFn(x, opts) : x;
+	}
+
+	return ret;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!***************************************************!*\
   !*** ./node_modules/prop-types/checkPropTypes.js ***!
@@ -5888,7 +6509,7 @@ var printWarning = function() {};
 if (true) {
   var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
   var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+  var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 
   printWarning = function(text) {
     var message = 'Warning: ' + text;
@@ -5900,7 +6521,7 @@ if (true) {
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
-    } catch (x) {}
+    } catch (x) { /**/ }
   };
 }
 
@@ -5929,7 +6550,8 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           if (typeof typeSpecs[typeSpecName] !== 'function') {
             var err = Error(
               (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' +
+              'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
             );
             err.name = 'Invariant Violation';
             throw err;
@@ -6001,9 +6623,9 @@ var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index
 var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 
 var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 
-var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
 
 if (true) {
@@ -6104,6 +6726,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
   var ReactPropTypes = {
     array: createPrimitiveTypeChecker('array'),
+    bigint: createPrimitiveTypeChecker('bigint'),
     bool: createPrimitiveTypeChecker('boolean'),
     func: createPrimitiveTypeChecker('function'),
     number: createPrimitiveTypeChecker('number'),
@@ -6149,8 +6772,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
    * is prohibitively expensive if they are created too often, such as what
    * happens in oneOfType() for any type before the one that matched.
    */
-  function PropTypeError(message) {
+  function PropTypeError(message, data) {
     this.message = message;
+    this.data = data && typeof data === 'object' ? data: {};
     this.stack = '';
   }
   // Make `instanceof Error` still work for returned errors.
@@ -6185,7 +6809,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           ) {
             printWarning(
               'You are manually calling a React.PropTypes validation ' +
-              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'function for the `' + propFullName + '` prop on `' + componentName + '`. This is deprecated ' +
               'and will throw in the standalone `prop-types` package. ' +
               'You may be seeing this warning due to a third-party PropTypes ' +
               'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
@@ -6224,7 +6848,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         // 'of type `object`'.
         var preciseType = getPreciseType(propValue);
 
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+        return new PropTypeError(
+          'Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'),
+          {expectedType: expectedType}
+        );
       }
       return null;
     }
@@ -6368,14 +6995,19 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     }
 
     function validate(props, propName, componentName, location, propFullName) {
+      var expectedTypes = [];
       for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
         var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+        if (checkerResult == null) {
           return null;
         }
+        if (checkerResult.data && has(checkerResult.data, 'expectedType')) {
+          expectedTypes.push(checkerResult.data.expectedType);
+        }
       }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+      var expectedTypesMessage = (expectedTypes.length > 0) ? ', expected one of type [' + expectedTypes.join(', ') + ']': '';
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`' + expectedTypesMessage + '.'));
     }
     return createChainableTypeChecker(validate);
   }
@@ -6390,6 +7022,13 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function invalidValidatorError(componentName, location, propFullName, key, type) {
+    return new PropTypeError(
+      (componentName || 'React class') + ': ' + location + ' type `' + propFullName + '.' + key + '` is invalid; ' +
+      'it must be a function, usually from the `prop-types` package, but received `' + type + '`.'
+    );
+  }
+
   function createShapeTypeChecker(shapeTypes) {
     function validate(props, propName, componentName, location, propFullName) {
       var propValue = props[propName];
@@ -6399,8 +7038,8 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       }
       for (var key in shapeTypes) {
         var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
+        if (typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
         if (error) {
@@ -6419,16 +7058,18 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (propType !== 'object') {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
       }
-      // We need to check all keys in case some are required but missing from
-      // props.
+      // We need to check all keys in case some are required but missing from props.
       var allKeys = assign({}, props[propName], shapeTypes);
       for (var key in allKeys) {
         var checker = shapeTypes[key];
+        if (has(shapeTypes, key) && typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+        }
         if (!checker) {
           return new PropTypeError(
             'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
             '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+            '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  ')
           );
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
@@ -6629,6 +7270,18 @@ if (true) {
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/lib/has.js":
+/*!********************************************!*\
+  !*** ./node_modules/prop-types/lib/has.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 
 /***/ }),
@@ -35774,9 +36427,9 @@ if ( true && typeof window !== 'undefined' && typeof navigator !== 'undefined' &
 /***/ }),
 
 /***/ "@reach/router":
-/*!*********************************************************************************************************!*\
-  !*** external "C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\@reach\\router\\index.js" ***!
-  \*********************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** external "C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\@reach\\router\\index.js" ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -35796,9 +36449,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*************************************************************************************************!*\
-  !*** external "C:\\Users\\54113\\Desktop\\Projects\\portfolio\\node_modules\\lodash\\merge.js" ***!
-  \*************************************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** external "C:\\Users\\acoju\\Repos\\portfolio-old\\node_modules\\lodash\\merge.js" ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

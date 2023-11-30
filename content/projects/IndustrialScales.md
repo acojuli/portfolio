@@ -1,5 +1,5 @@
 ---
-date: '2019-05-01'
+date: '5'
 title: 'Industrial scales'
 external: 'https://balanzasindustriales.netlify.app/'
 tech:

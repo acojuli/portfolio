@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2'
 title: 'Plantits'
 cover: './plantits.jpg'
 github: 'https://github.com/acojuli/plantits'

@@ -1,5 +1,5 @@
 ---
-date: '2020-03-27'
+date: '7'
 title: 'Landing Website for an insurance company'
 external: 'https://www.organizacionmonaco.com.ar/'
 tech:

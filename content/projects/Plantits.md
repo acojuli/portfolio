@@ -1,5 +1,5 @@
 ---
-date: '2019-07-15'
+date: '8'
 title: 'Plantits'
 github: 'https://github.com/acojuli/plantits'
 external: 'https://plantits.netlify.app/'
