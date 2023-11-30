@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript', 'TypeScript', 'React JS', 'Redux', 'Next JS', 'Jest', 'Module Federation', 'Material UI'  ];
+  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React js', 'Firebase', 'Next js', 'Git'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,20 +142,14 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            With 12 years of experience in Front End development
-            and a passion for React, I have a strong knowledge of
-            performance optimization, accessibility, and team management.
+              My interest in development started back in 2003 when I decided to create my own mod of
+              a videogame titled Argentum Online. This experience taught me a little about Visual
+              Basic &amp; Servers!
             </p>
 
             <p>
-            With expertise in managing architecture, optimizing code,
-            and delivering scalable applications, I strive to create
-            the best digital experiences for users.
-            </p>
-
-            <p>
-            Seeking to excel my skills, stay updated with emerging tech,
-            and contribute to innovation. Committed to Kaizen philosophy.
+              My main goal these days is to keep building accessible, inclusive systems and
+              outstanding digital experiences.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '3'
 title: 'Plantits'
 cover: './plantits.jpg'
 github: 'https://github.com/acojuli/plantits'
@@ -9,7 +9,7 @@ tech:
   - JSX
   - Bootstrap
   - Firestore
-  - VSC  
+  - VSC
 showInProjects: true
 ---
 

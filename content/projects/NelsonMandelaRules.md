@@ -1,5 +1,5 @@
 ---
-date: '6'
+date: '2016-04-01'
 title: 'Nelson Mandela Rules'
 github: ''
 external: 'https://reglasmandela.com.ar/'

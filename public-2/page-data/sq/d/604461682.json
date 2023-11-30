@@ -1,0 +1,56 @@
+{
+  "data": {
+    "jobs": {
+      "edges": [
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Tech Lead",
+              "company": "PPN",
+              "location": "CABA, Arg",
+              "range": "Mar 2019 - Present",
+              "url": "https://www.ppn.gov.ar/"
+            },
+            "html": "<ul>\n<li>Work with team members to provide timely and accurate estimates for\ndevelopment solutions</li>\n<li>Provide mentoring, guidance, feedback and training to team members</li>\n<li>Developed and manage projects in PHP, JavaScript, Joomla, WordPress, Apache, and MySQL</li>\n<li>Communication with multi-disciplinary teams of designers, producers, and directors on a daily basics</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Web Developer",
+              "company": "PPN",
+              "location": "CABA, Arg",
+              "range": "July 2013 - May 2019",
+              "url": "https://www.ppn.gov.ar/"
+            },
+            "html": "<ul>\n<li>Devised various custom responsive sites from design comps with Joomla, JavaScript, HTML &#x26; CSS</li>\n<li>Maintenance of Apache server</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Web Developer",
+              "company": "Corporate Corp",
+              "location": "Saavedra, Bs As",
+              "range": "March - July 2013",
+              "url": "http://kenbrown-audio-tv.com.ar/"
+            },
+            "html": "<ul>\n<li>Development of attractive websites for marketing campaigns for Ken Brown, Vivitar and Computers Depot</li>\n<li>Maintenance of an ecommerce system developed with PHP</li>\n</ul>"
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Web Developer & Project Manager",
+              "company": "Upttec",
+              "location": "Haedo, Bs As",
+              "range": "Jan 2011 - Mar 2013",
+              "url": "https://upttec.com/"
+            },
+            "html": "<ul>\n<li>Developed and maintained code for in-house and client websites with JavaScript, PHP, HTML &#x26; CSS</li>\n<li>Manage projects for Santander Rio, Volkswagen and Remax</li>\n</ul>"
+          }
+        }
+      ]
+    }
+  }
+}

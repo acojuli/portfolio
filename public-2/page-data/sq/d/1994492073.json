@@ -1,0 +1,13 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "defaultTitle": "Guido Julian Gomez - Front End Developer",
+        "defaultDescription": "Guido Julian Gomez is a Front End Developer who specializes in building (and occasionally designing) exceptional digital experiences.",
+        "siteUrl": "https://acojuli.com.ar",
+        "defaultImage": "/og.png",
+        "twitterUsername": "@acojuli"
+      }
+    }
+  }
+}

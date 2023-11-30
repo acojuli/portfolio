@@ -1,5 +1,5 @@
 ---
-date: '10'
+date: '2016-08-01'
 title: 'React Portfolio'
 github: 'https://github.com/acojuli/plantits'
 external: 'https://www.acojuli.com.ar'

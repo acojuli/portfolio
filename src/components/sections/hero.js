@@ -54,13 +54,14 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Guido Julian Gomez.</h2>;
-  const three = <h3 className="big-heading">Front End Engineer.</h3>;
+  const three = <h3 className="big-heading">Front End Developer.</h3>;
   const four = (
     <p>
-      I'm a software engineer who specializes in building robust and scalable digital experiences. 
-      Currently I'm working as a Front End Architect in a Micro Frontend project at {' '}
-      <a href="https://gft.com/">GFT technologies.</a> 
-      <br/>I also write some code in a personal project for{' '}<a href="https://www.cpm.la/">CPM.</a>
+      I'm a software developer who specializes in building (and occasionally designing) digital
+      experiences. Currently, I'm working as a Tech Leader at the{' '}
+      <a href="https://ppn.gov.ar/">Prison Ombudsman's Office.</a>
+      <br />I also work as a React JS Tutor at{' '}
+      <a href="https://www.coderhouse.com/">Coder House.</a>
     </p>
   );
   const five = (

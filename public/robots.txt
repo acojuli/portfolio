@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://acojuli.com.ar/sitemap-index.xml
+Host: https://acojuli.com.ar

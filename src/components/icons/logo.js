@@ -11,13 +11,13 @@ const IconLogo = () => (
         />
       </g>
       <polygon
-          id="Shape"
-          stroke="currentColor"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          points="39 0 0 22 0 67 39 90 78 68 78 23"
-        />
+        id="Shape"
+        stroke="currentColor"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        points="39 0 0 22 0 67 39 90 78 68 78 23"
+      />
     </g>
   </svg>
 );
